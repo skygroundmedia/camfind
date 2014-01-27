@@ -1,7 +1,7 @@
 Objective
 ===
 
-Create an iOS camera app that takes a picture and shows a search results from Shopify similar to CamFind. 
+Create an iOS camera app that takes a picture and shows a search results from Shopify similar to [CamFind](https://itunes.apple.com/us/app/camfind-search-qr-reader-price/id595857716?mt=8). 
 
 1. Open the app
 2. Take a picture
