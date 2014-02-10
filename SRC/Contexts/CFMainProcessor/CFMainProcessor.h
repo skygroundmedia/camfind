@@ -7,18 +7,20 @@
 //
 
 typedef enum {
-    processorReady,
+    processorStatusReady,
     processorStatusImageSending,
-    processorStatusImageSendingProcessed,
+    processorStatusImageSendingComplete,
     processorStatusImageSendingFailed,
-    processorStatusTokenSending,
-    processorStatusTokenSendingProcessed,
-    processorStatusTokenSendingFailed,
-    processorStatusYQLSending,
-    processorStatusYQLSendingProcessed,
-    processorStatusYQLSendingFailed,
-    processorStatusProcessed,
+    processorStatusDescriptionGetting,
+    processorStatusDescriptionGettingComplete,
+    processorStatusDescriptionGettingFailed,
+    processorStatusImpctfulSearching,
+    processorStatusImpctfulSearchingComplete,
+    processorStatusImpctfulSearchingFailed,
+    processorStatusComplete,
 } processorStatus;
+
+#define PROCESSCOUNT 3.0
 
 @interface CFMainProcessor : IDPModel
 
@@ -29,11 +31,13 @@ typedef enum {
 @property (nonatomic, readonly) processorStatus status;
 @property (nonatomic, readonly) int             getDescriptionRepeatCounter;
 
-+ (NSString *)stringForStatus:(processorStatus)status;
++ (NSArray *)statusStrings;
 + (void)saveImageToAlbum:(UIImage *)image;
 
-- (void)processingImage:(UIImage *)image;
-- (void)processingToken:(NSString *)token;
-- (void)processingDescription:(NSString *)imageDescription;
+- (void)sendImage:(UIImage *)image;
+- (void)getDescriptionWithToken:(NSString *)token;
+- (void)searchImpctfulForDescription:(NSString *)imageDescription;
+
+- (float)indicatorWidth;
 
 @end

@@ -23,6 +23,7 @@
 		EBB345B818A102A30075F419 /* CFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B618A102A30075F419 /* CFDetailViewController.m */; };
 		EBB345BA18A1259F0075F419 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB345B918A1259F0075F419 /* AssetsLibrary.framework */; };
 		EBB345BE18A133090075F419 /* UIImage+GRResize.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345BD18A133090075F419 /* UIImage+GRResize.m */; };
+		EBB88EBF18A8E73900546BC2 /* CFImpctfulSearchContext.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB88EBE18A8E73900546BC2 /* CFImpctfulSearchContext.m */; };
 		EBEF5683189FCD76006DA9C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEF5682189FCD76006DA9C8 /* Foundation.framework */; };
 		EBEF5685189FCD76006DA9C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEF5684189FCD76006DA9C8 /* CoreGraphics.framework */; };
 		EBEF5687189FCD76006DA9C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEF5686189FCD76006DA9C8 /* UIKit.framework */; };
@@ -40,7 +41,6 @@
 		EBEF58A9189FCE34006DA9C8 /* CFGetDescriptionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF57E1189FCE34006DA9C8 /* CFGetDescriptionContext.m */; };
 		EBEF58AA189FCE34006DA9C8 /* CFPostImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF57E4189FCE34006DA9C8 /* CFPostImageContext.m */; };
 		EBEF58AB189FCE34006DA9C8 /* CFXMLProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF57E7189FCE34006DA9C8 /* CFXMLProcessor.m */; };
-		EBEF58AC189FCE34006DA9C8 /* CFYQLGetSearchContext.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF57EA189FCE34006DA9C8 /* CFYQLGetSearchContext.m */; };
 		EBEF58AD189FCE34006DA9C8 /* CGGeometry+IDPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF57F0189FCE34006DA9C8 /* CGGeometry+IDPExtensions.m */; };
 		EBEF58AE189FCE34006DA9C8 /* IDPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBEF57F3189FCE34006DA9C8 /* IDPMath.mm */; };
 		EBEF58AF189FCE34006DA9C8 /* NSArray+IDPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF57F7189FCE34006DA9C8 /* NSArray+IDPExtensions.m */; };
@@ -143,6 +143,8 @@
 		EBB345B918A1259F0075F419 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		EBB345BC18A133090075F419 /* UIImage+GRResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GRResize.h"; sourceTree = "<group>"; };
 		EBB345BD18A133090075F419 /* UIImage+GRResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GRResize.m"; sourceTree = "<group>"; };
+		EBB88EBD18A8E73900546BC2 /* CFImpctfulSearchContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFImpctfulSearchContext.h; sourceTree = "<group>"; };
+		EBB88EBE18A8E73900546BC2 /* CFImpctfulSearchContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFImpctfulSearchContext.m; sourceTree = "<group>"; };
 		EBEF567F189FCD76006DA9C8 /* CamFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEF5682189FCD76006DA9C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBEF5684189FCD76006DA9C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,8 +170,6 @@
 		EBEF57E4189FCE34006DA9C8 /* CFPostImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFPostImageContext.m; sourceTree = "<group>"; };
 		EBEF57E6189FCE34006DA9C8 /* CFXMLProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFXMLProcessor.h; sourceTree = "<group>"; };
 		EBEF57E7189FCE34006DA9C8 /* CFXMLProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFXMLProcessor.m; sourceTree = "<group>"; };
-		EBEF57E9189FCE34006DA9C8 /* CFYQLGetSearchContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFYQLGetSearchContext.h; sourceTree = "<group>"; };
-		EBEF57EA189FCE34006DA9C8 /* CFYQLGetSearchContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFYQLGetSearchContext.m; sourceTree = "<group>"; };
 		EBEF57EF189FCE34006DA9C8 /* CGGeometry+IDPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+IDPExtensions.h"; sourceTree = "<group>"; };
 		EBEF57F0189FCE34006DA9C8 /* CGGeometry+IDPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+IDPExtensions.m"; sourceTree = "<group>"; };
 		EBEF57F1189FCE34006DA9C8 /* IDPCommonKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCommonKit.h; sourceTree = "<group>"; };
@@ -386,6 +386,15 @@
 			path = CFDetailViewController;
 			sourceTree = "<group>";
 		};
+		EBB88EBC18A8E73900546BC2 /* CFImpctfulSearchContext */ = {
+			isa = PBXGroup;
+			children = (
+				EBB88EBD18A8E73900546BC2 /* CFImpctfulSearchContext.h */,
+				EBB88EBE18A8E73900546BC2 /* CFImpctfulSearchContext.m */,
+			);
+			path = CFImpctfulSearchContext;
+			sourceTree = "<group>";
+		};
 		EBEF5676189FCD76006DA9C8 = {
 			isa = PBXGroup;
 			children = (
@@ -487,7 +496,7 @@
 				EB1634E018A223ED00DD17D5 /* CFMainProcessor */,
 				EBEF57E2189FCE34006DA9C8 /* CFPostImageContext */,
 				EBEF57DF189FCE34006DA9C8 /* CFGetDescriptionContext */,
-				EBEF57E8189FCE34006DA9C8 /* CFYQLGetSearchContext */,
+				EBB88EBC18A8E73900546BC2 /* CFImpctfulSearchContext */,
 				EBEF57E5189FCE34006DA9C8 /* CFXMLProcessor */,
 			);
 			path = Contexts;
@@ -518,15 +527,6 @@
 				EBEF57E7189FCE34006DA9C8 /* CFXMLProcessor.m */,
 			);
 			path = CFXMLProcessor;
-			sourceTree = "<group>";
-		};
-		EBEF57E8189FCE34006DA9C8 /* CFYQLGetSearchContext */ = {
-			isa = PBXGroup;
-			children = (
-				EBEF57E9189FCE34006DA9C8 /* CFYQLGetSearchContext.h */,
-				EBEF57EA189FCE34006DA9C8 /* CFYQLGetSearchContext.m */,
-			);
-			path = CFYQLGetSearchContext;
 			sourceTree = "<group>";
 		};
 		EBEF57EB189FCE34006DA9C8 /* Kits */ = {
@@ -1091,6 +1091,7 @@
 				EBEF58E0189FCE34006DA9C8 /* UNIJsonNode.m in Sources */,
 				EBEF58C9189FCE34006DA9C8 /* IDPStackArray.m in Sources */,
 				EBEF58D0189FCE34006DA9C8 /* UIEvent+IDPExtensions.m in Sources */,
+				EBB88EBF18A8E73900546BC2 /* CFImpctfulSearchContext.m in Sources */,
 				EBEF58CC189FCE34006DA9C8 /* IDPWeakArray.m in Sources */,
 				EBEF58E7189FCE34006DA9C8 /* CFContactView.m in Sources */,
 				EBEF58BC189FCE34006DA9C8 /* IDPModel.m in Sources */,
@@ -1119,7 +1120,6 @@
 				EBEF58DE189FCE34006DA9C8 /* UNIHTTPResponse.m in Sources */,
 				EB1634F918A2723400DD17D5 /* CFListCell.m in Sources */,
 				EBEF58C5189FCE34006DA9C8 /* IDPReference.m in Sources */,
-				EBEF58AC189FCE34006DA9C8 /* CFYQLGetSearchContext.m in Sources */,
 				EBEF58D1189FCE34006DA9C8 /* UIImage+IDPExtensions.m in Sources */,
 				EBEF58E3189FCE34006DA9C8 /* UNIHTTPRequestWithBody.m in Sources */,
 				EBEF58B9189FCE34006DA9C8 /* IDPKVOContext.m in Sources */,

@@ -14,14 +14,15 @@
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
-    self.imageView = nil;
-    self.tokenLabel = nil;
     self.imageDescriptionTextField = nil;
     self.tableView = nil;
     self.statusLabel = nil;
-    self.tableViewBackView = nil;
-    self.tableViewStatusLabel = nil;
 
+
+    [_statusBackView release];
+    [_statusIndicatorView release];
+    [_statusLabel release];
+    [_tableViewBackView release];
     [super dealloc];
 }
 
@@ -32,6 +33,24 @@
     self.tableView.alpha = haveRows;
 //    self.tableViewStatusLabel.alpha = !haveRows;
 //    self.tableViewStatusLabel.text = @"no data for show";
+}
+
+-(void)updateStatusWithProcessor:(CFMainProcessor *)processor {
+    CGRect frame = self.statusIndicatorView.frame;
+    if (processor) {
+        self.statusLabel.text = [CFMainProcessor statusStrings][processor.status];
+        frame.size.width = self.statusBackView.frame.size.width * [processor indicatorWidth];
+    } else {
+        self.statusLabel.text = [CFMainProcessor statusStrings][processorStatusReady];
+        frame.size.width = 0;
+    }
+    self.statusIndicatorView.frame = frame;
+    if (processor.status == processorStatusDescriptionGettingComplete) {
+        self.imageDescriptionTextField.text = processor.imageDescription;
+    }
+    if (processor.status == processorStatusImageSendingComplete) {
+        self.testTokenLabel.text = processor.token;
+    }
 }
 
 @end
