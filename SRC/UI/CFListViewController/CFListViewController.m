@@ -129,8 +129,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
                                           cancelButtonTitle:kCFGetPhotoCancel
                                      destructiveButtonTitle:nil
                                           otherButtonTitles:kCFGetPhotoFromCamera,
-                                                            kCFGetPhotoFromPhotoLibrary,
-                                                            kCFGetPhotoFromSavedPhotosAlbum, nil] autorelease];
+                                                            kCFGetPhotoFromPhotoLibrary, nil] autorelease];
 }
 
 - (void)prepareImagePickerController {
@@ -143,9 +142,6 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 
 #pragma mark -
 #pragma mark UIImagePickerControllerDelegate
-
-
-//self.loadingView = [IDPLoadingView loadingViewInView:self.listView.tableView withMessage:@"sending image"];
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
@@ -264,7 +260,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
             break;
             
         default:
-            sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             break;
     }
     BOOL isSourceTypeAvailable = [UIImagePickerController isSourceTypeAvailable:sourceType];

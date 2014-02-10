@@ -30,8 +30,8 @@
 
 - (void)tableViewHaveRows:(BOOL)haveRows {
     self.tableView.alpha = haveRows;
-    self.tableViewStatusLabel.alpha = !haveRows;
-    self.tableViewStatusLabel.text = @"no data for show";
+//    self.tableViewStatusLabel.alpha = !haveRows;
+//    self.tableViewStatusLabel.text = @"no data for show";
 }
 
 @end
