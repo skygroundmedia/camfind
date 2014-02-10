@@ -143,9 +143,6 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 #pragma mark -
 #pragma mark UIImagePickerControllerDelegate
 
-
-//self.loadingView = [IDPLoadingView loadingViewInView:self.listView.tableView withMessage:@"sending image"];
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {

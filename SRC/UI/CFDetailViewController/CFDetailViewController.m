@@ -51,7 +51,8 @@ IDPViewControllerViewOfClassGetterSynthesize (CFDetailView, detailView)
 
 - (IBAction)onBack:(id)sender {
     self.model = nil;
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -
