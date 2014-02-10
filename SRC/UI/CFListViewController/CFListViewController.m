@@ -129,8 +129,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
                                           cancelButtonTitle:kCFGetPhotoCancel
                                      destructiveButtonTitle:nil
                                           otherButtonTitles:kCFGetPhotoFromCamera,
-                                                            kCFGetPhotoFromPhotoLibrary,
-                                                            kCFGetPhotoFromSavedPhotosAlbum, nil] autorelease];
+                                                            kCFGetPhotoFromPhotoLibrary, nil] autorelease];
 }
 
 - (void)prepareImagePickerController {
@@ -264,7 +263,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
             break;
             
         default:
-            sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             break;
     }
     BOOL isSourceTypeAvailable = [UIImagePickerController isSourceTypeAvailable:sourceType];
