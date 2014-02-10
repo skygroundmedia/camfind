@@ -53,8 +53,8 @@ static NSString * const kCFFeedbackURLString            = @"http://mobile.kdfc.c
 static NSString * const kCFImpctfulHost                 = @"http://impctful.com/";
 
 static double     const kCFMaxImageSize                 = 480.;// if MAX(height, wigth) > maxImageSize then scale = MAX / maxImageSize
-static float      const kCFGetDescriptionDelay          = 6.;
-static int        const kCFGetDescriptionRepeatCount    = 10;
+static float      const kCFGetDescriptionDelay          = 5.;
+static int        const kCFGetDescriptionRepeatCount    = 12;
 
 static NSString * const kCFGetPhotoPrompt               = @"Get photo from";
 static NSString * const kCFGetPhotoCancel               = @"Cancel";
@@ -62,7 +62,24 @@ static NSString * const kCFGetPhotoFromCamera           = @"Camera";
 static NSString * const kCFGetPhotoFromPhotoLibrary     = @"PhotoLibrary";
 static NSString * const kCFGetPhotoFromSavedPhotosAlbum = @"SavedPhotosAlbum";
 
-static NSString * const kCFProcessorStatusKey           = @"processorStatus";
+static NSString * const kCFEmptySearchResultTitle       = @"Search Results";
+static NSString * const kCFEmptySearchResultAlert       = @"We have not yet found an Impctful equivalent but we're always updating our catalog. If there's a product you'd like for us to find, drop us a note.";
 
 
 
+#pragma mark -
+#pragma mark Processor status defs
+
+static NSString * const kCFProcessorStatusKey                   = @"processorStatus";
+
+static NSString * const kCFProcessorReady                       = @"Ready";                         // processorStatusReady
+static NSString * const kCFProcessorImageSending                = @"Image Posting";                 // processorStatusImageSending
+static NSString * const kCFProcessorImageSendingComplete        = @"Image Posted";                  // processorStatusImageSendingComplete
+static NSString * const kCFProcessorImageSendingFailed          = @"Image Posting Failed";          // processorStatusImageSendingFailed
+static NSString * const kCFProcessorGettingDescription          = @"Getting Description";           // processorStatusDescriptionGetting
+static NSString * const kCFProcessorGettingDescriptionComplete  = @"Description Received";          // processorStatusDescriptionGettingComplete
+static NSString * const kCFProcessorGettingDescriptionFailed    = @"Getting Description Failed";    // processorStatusDescriptionGettingFailed
+static NSString * const kCFProcessorImpctfulSearching           = @"Searching Impctful database";   // processorStatusImpctfulSearching
+static NSString * const kCFProcessorImpctfulSearchingComplete   = @"Impctful database Searching Complete";   // processorStatusImpctfulSearchingComplete
+static NSString * const kCFProcessorImpctfulSearchingFailed     = @"Impctful database Searching Failed";     // processorStatusImpctfulSearchingFailed
+static NSString * const kCFProcessorComplete                    = @"Search Complete";               // processorStatusComplete

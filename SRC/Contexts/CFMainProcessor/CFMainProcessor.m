@@ -9,14 +9,14 @@
 #import "CFMainProcessor.h"
 #import "CFPostImageContext.h"
 #import "CFGetDescriptionContext.h"
-#import "CFYQLGetSearchContext.h"
+#import "CFImpctfulSearchContext.h"
 #import "CFXMLProcessor.h"
 #import "UIImage+GRResize.h"
 
 @interface CFMainProcessor () <IDPModelObserver>
 @property (nonatomic, retain) CFPostImageContext      *postImageContext;
 @property (nonatomic, retain) CFGetDescriptionContext *getDescriptionContext;
-@property (nonatomic, retain) CFYQLGetSearchContext   *getSearchContext;
+@property (nonatomic, retain) CFImpctfulSearchContext *getSearchContext;
 
 @property (nonatomic, retain) UIImage  *image;
 @property (nonatomic, retain) NSString *token;
@@ -34,23 +34,24 @@
 #pragma mark -
 #pragma mark Class methods
 
-static NSArray *__statusStrings;
+static NSArray *__processorStatusStrings;
 
-+ (NSString *)stringForStatus:(processorStatus)status {
-    if (!__statusStrings) {
-        __statusStrings = [@[@"processorReady",
-                             @"processorStatusImageSending",
-                             @"processorStatusImageSended",
-                             @"processorStatusImageSendingFailed",
-                             @"processorStatusTokenSending",
-                             @"processorStatusTokenSended",
-                             @"processorStatusTokenSendingFailed",
-                             @"processorStatusYQLSending",
-                             @"processorStatusYQLSended",
-                             @"processorStatusYQLSendingFailed",
-                             @"processorStatusProcessed"] retain];
++ (NSArray *)statusStrings {
+    if (!__processorStatusStrings) {
+        __processorStatusStrings = @[kCFProcessorReady,
+                                     kCFProcessorImageSending,
+                                     kCFProcessorImageSendingComplete,
+                                     kCFProcessorImageSendingFailed,
+                                     kCFProcessorGettingDescription,
+                                     kCFProcessorGettingDescriptionComplete,
+                                     kCFProcessorGettingDescriptionFailed,
+                                     kCFProcessorImpctfulSearching,
+                                     kCFProcessorImpctfulSearchingComplete,
+                                     kCFProcessorImpctfulSearchingFailed,
+                                     kCFProcessorComplete];
+        [__processorStatusStrings retain];
     }
-    return __statusStrings[status];
+    return __processorStatusStrings;
 }
 
 + (void)saveImageToAlbum:(UIImage *)image {
@@ -78,7 +79,7 @@ static NSArray *__statusStrings;
 #pragma mark -
 #pragma mark Public methods
 
-- (void)processingImage:(UIImage *)image {
+- (void)sendImage:(UIImage *)image {
     if (!image) {
         self.status = processorStatusImageSendingFailed;
         [self failLoading];
@@ -92,30 +93,75 @@ static NSArray *__statusStrings;
     [self.postImageContext load];
 }
 
-- (void)processingToken:(NSString *)token {
+- (void)getDescriptionWithToken:(NSString *)token {
     if (!token.length) {
-        self.status = processorStatusTokenSendingFailed;
+        self.status = processorStatusDescriptionGettingFailed;
         [self failLoading];
         return;
     }
     self.token = token;
-    self.status = processorStatusTokenSending;
+    self.status = processorStatusDescriptionGetting;
     self.getDescriptionRepeatCounter = 0;
-    [self startProcessingToken];
+    [self startDescriptionGetting];
 }
 
-- (void)processingDescription:(NSString *)imageDescription {
+- (void)searchImpctfulForDescription:(NSString *)imageDescription {
     if (!imageDescription.length) {
-        self.status = processorStatusYQLSendingFailed;
+        self.status = processorStatusImpctfulSearchingFailed;
         [self failLoading];
         return;
     }
     self.imageDescription = imageDescription;
-    self.status = processorStatusYQLSending;
+    self.status = processorStatusImpctfulSearching;
     
-    self.getSearchContext = [CFYQLGetSearchContext object];
+    self.getSearchContext = [CFImpctfulSearchContext object];
     self.getSearchContext.searchString = imageDescription;
     [self.getSearchContext load];
+}
+
+- (float)indicatorWidth {
+    float width = 0;
+    switch (self.status) {
+            
+        case processorStatusReady:
+            width = [self frameWidth:3 :0 :0];
+            break;
+            
+        case processorStatusImageSending:
+            width = [self frameWidth:0 :1 :2];
+            break;
+        case processorStatusImageSendingComplete:
+            width = [self frameWidth:1 :0 :0];
+            break;
+        case processorStatusImageSendingFailed:
+            width = [self frameWidth:1 :0 :0];
+            break;
+            
+        case processorStatusDescriptionGetting:
+            width = [self frameWidth:1 :self.getDescriptionRepeatCounter :kCFGetDescriptionRepeatCount];
+            break;
+        case processorStatusDescriptionGettingComplete:
+            width = [self frameWidth:2 :0 :0];
+            break;
+        case processorStatusDescriptionGettingFailed:
+            width = [self frameWidth:1 :self.getDescriptionRepeatCounter :kCFGetDescriptionRepeatCount];
+            break;
+            
+        case processorStatusImpctfulSearching:
+            width = [self frameWidth:2 :1 :2];
+            break;
+        case processorStatusImpctfulSearchingComplete:
+            width = [self frameWidth:3 :0 :0];
+            break;
+        case processorStatusImpctfulSearchingFailed:
+            width = [self frameWidth:3 :0 :0];
+            break;
+            
+        default:
+            width = 1;
+            break;
+    }
+    return width;
 }
 
 #pragma mark -
@@ -126,6 +172,13 @@ static NSArray *__statusStrings;
     [self notifyObserversOfChanges];
 }
 
+- (void)setGetDescriptionRepeatCounter:(int)getDescriptionRepeatCounter {
+    _getDescriptionRepeatCounter = getDescriptionRepeatCounter;
+    if (getDescriptionRepeatCounter) {
+        [self notifyObserversOfChanges];
+    }
+}
+
 -(void)setPostImageContext:(CFPostImageContext *)postImageContext {
     IDPNonatomicRetainModelSynthesizeWithObserving(_postImageContext, postImageContext, self);
 }
@@ -134,28 +187,33 @@ static NSArray *__statusStrings;
     IDPNonatomicRetainModelSynthesizeWithObserving(_getDescriptionContext, getDescriptionContext, self);
 }
 
--(void)setGetSearchContext:(CFYQLGetSearchContext *)getSearchContext {
+-(void)setGetSearchContext:(CFImpctfulSearchContext *)getSearchContext {
     IDPNonatomicRetainModelSynthesizeWithObserving(_getSearchContext, getSearchContext, self);
 }
 
 #pragma mark -
 #pragma mark Private methods
 
-- (void)startProcessingToken {
-    if (++self.getDescriptionRepeatCounter >= kCFGetDescriptionRepeatCount) {
-        self.status = processorStatusTokenSendingFailed;
+- (void)startDescriptionGetting {
+    if (self.getDescriptionRepeatCounter+1 > kCFGetDescriptionRepeatCount) {
+        self.status = processorStatusDescriptionGettingFailed;
         [self failLoading];
     } else {
-        NSLog(@"try %d", self.getDescriptionRepeatCounter);
-        self.getDescriptionContext = [CFGetDescriptionContext object];
-        self.getDescriptionContext.key = self.token;
-        [self.getDescriptionContext load];
+        self.getDescriptionRepeatCounter++;
+        [self performSelector:@selector(doDescriptionGetting) withObject:self afterDelay:kCFGetDescriptionDelay];
     }
 }
 
+- (void)doDescriptionGetting {
+    self.getDescriptionContext = [CFGetDescriptionContext object];
+    self.getDescriptionContext.key = self.token;
+    [self.getDescriptionContext load];
+}
+
+
 - (void)processXML:(NSData *)xmlData {
     self.result = [CFXMLProcessor arrayFromXMLData:xmlData];
-    self.status = processorStatusProcessed;
+    self.status = processorStatusComplete;
     [self finishLoading];
 }
 
@@ -167,29 +225,35 @@ static NSArray *__statusStrings;
     return image;
 }
 
+- (float)frameWidth:(int)a :(int)b :(int)c {
+    float width = 1.0 * a  / PROCESSCOUNT;
+    if (b && c > 0) {
+        width += 1.0 * b / c / PROCESSCOUNT;
+    }
+    return width;
+}
+
 #pragma mark -
 #pragma mark IDPModelObserver methods
 
 - (void)modelDidLoad:(id)theModel {
     if (theModel == self.postImageContext) {
-        self.token = self.postImageContext.key;
-        self.status = processorStatusImageSendingProcessed;
-        [self processingToken:self.postImageContext.key];
+        self.token = self.postImageContext.token;
+        self.status = processorStatusImageSendingComplete;
+        [self getDescriptionWithToken:self.postImageContext.token];
     }
     if (theModel == self.getDescriptionContext) {
         if (self.getDescriptionContext.imageDescription) {
             self.imageDescription = self.getDescriptionContext.imageDescription;
-            self.status = processorStatusTokenSendingProcessed;
-            [self processingDescription:self.getDescriptionContext.imageDescription];
+            self.status = processorStatusDescriptionGettingComplete;
+            [self searchImpctfulForDescription:self.getDescriptionContext.imageDescription];
         } else {
-            [self performSelector:@selector(startProcessingToken)
-                       withObject:self
-                       afterDelay:kCFGetDescriptionDelay];
+            [self startDescriptionGetting];
         }
     }
     if (theModel == self.getSearchContext) {
         self.xmlData = self.getSearchContext.xmlData;
-        self.status = processorStatusYQLSendingProcessed;
+        self.status = processorStatusImpctfulSearchingComplete;
         [self processXML:self.getSearchContext.xmlData];
     }
 }
@@ -199,10 +263,10 @@ static NSArray *__statusStrings;
         self.status = processorStatusImageSendingFailed;
     }
     if (theModel == self.getDescriptionContext) {
-        self.status = processorStatusTokenSendingFailed;
+        self.status = processorStatusDescriptionGettingFailed;
     }
     if (theModel == self.getSearchContext) {
-        self.status = processorStatusYQLSendingFailed;
+        self.status = processorStatusImpctfulSearchingFailed;
     }
     [self failLoading];
 }

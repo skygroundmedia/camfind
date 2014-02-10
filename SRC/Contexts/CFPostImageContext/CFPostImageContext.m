@@ -9,7 +9,7 @@
 #import "CFPostImageContext.h"
 
 @interface CFPostImageContext ()
-@property (nonatomic, retain) NSString *key;
+@property (nonatomic, retain) NSString *token;
 @end
 
 @implementation CFPostImageContext
@@ -19,7 +19,7 @@
 
 - (void)dealloc {
     self.image = nil;
-    self.key = nil;
+    self.token = nil;
     
     [super dealloc];
 }
@@ -54,7 +54,7 @@
             if (error || errorFromJSON) {
                 [self failLoading];
             } else {
-                self.key = json[kSFCFJSONToken];
+                self.token = json[kSFCFJSONToken];
                 [self finishLoading];
             }
         });

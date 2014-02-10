@@ -26,7 +26,6 @@
 @property (nonatomic, retain) CFMainProcessor   *processor;
 @property (nonatomic, assign) CFRecordModel     *selectedModel;
 
-
 @end
 
 @implementation CFListViewController
@@ -55,6 +54,7 @@
     self.testListCellWOImage = [UINib loadClass:[CFListCellWOImage class] withOwner:self];
     [self prepareActionSheet];
     self.dataSource = nil;
+    [self.listView updateStatusWithProcessor:nil];
     [self startImageProcessing];
 }
 
@@ -88,14 +88,14 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 - (IBAction)onGetDescription:(id)sender {
     [self showLoadingView];
     self.processor = [CFMainProcessor object];
-    [self.processor processingToken:self.listView.tokenLabel.text];
+    [self.processor getDescriptionWithToken:self.listView.testTokenLabel.text];
 }
 
 - (IBAction)onYahooSearch:(id)sender {
     [self.listView.imageDescriptionTextField resignFirstResponder];
     [self showLoadingView];
     self.processor = [CFMainProcessor object];
-    [self.processor processingDescription:self.listView.imageDescriptionTextField.text];
+    [self.processor searchImpctfulForDescription:self.listView.imageDescriptionTextField.text];
 }
 
 #pragma mark -
@@ -118,6 +118,14 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 
 - (void)showBage:(NSString *)bage {
     self.tabBarItem.badgeValue = bage;
+}
+
+- (void)showAllertOfEmptySearchResult {
+    [[[[UIAlertView alloc] initWithTitle:kCFEmptySearchResultTitle
+                                 message:kCFEmptySearchResultAlert
+                                delegate:nil
+                       cancelButtonTitle:@"Ok"
+                       otherButtonTitles:nil] autorelease] show];
 }
 
 #pragma mark -
@@ -148,11 +156,11 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
         [CFMainProcessor saveImageToAlbum:image];
     }
-    self.listView.imageView.image = image;
+    self.listView.testImageView.image = image;
     [picker dismissViewControllerAnimated:YES completion:^{}];
     [self showLoadingView];
     self.processor = [CFMainProcessor object];
-    [self.processor processingImage:image];
+    [self.processor sendImage:image];
 }
 
 #pragma mark -
@@ -163,12 +171,15 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
         self.dataSource = self.processor.result;
         [self.listView.tableView reloadData];
         self.loadingView = nil;
+        if (!self.dataSource.count) {
+            [self showAllertOfEmptySearchResult];
+        }
     }
 }
 
 - (void)modelDidFailToLoad:(id)theModel {
     if (theModel == self.processor) {
-        NSLog(@"fail to load with status %@", [CFMainProcessor stringForStatus:self.processor.status]);
+        NSLog(@"fail to load with status %@", [CFMainProcessor statusStrings][self.processor.status]);
         self.dataSource = nil;
         self.loadingView = nil;
     }
@@ -176,14 +187,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 
 - (void)modelDidChange:(id)theModel {
     if (theModel == self.processor) {
-        processorStatus status = self.processor.status;
-        self.listView.statusLabel.text = [CFMainProcessor stringForStatus:status];
-        if (status == processorStatusImageSendingProcessed) {
-            self.listView.tokenLabel.text = self.processor.token;
-        }
-        if (status == processorStatusTokenSendingProcessed) {
-            self.listView.imageDescriptionTextField.text = self.processor.imageDescription;
-        }
+        [self.listView updateStatusWithProcessor:self.processor];
     }
 }
 

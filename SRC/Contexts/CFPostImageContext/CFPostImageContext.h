@@ -9,6 +9,6 @@
 @interface CFPostImageContext : IDPModel
 
 @property (nonatomic, retain)   UIImage     *image;
-@property (nonatomic, readonly) NSString    *key;
+@property (nonatomic, readonly) NSString    *token;
 
 @end
