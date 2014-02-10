@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91EA431D18A9222F0071F1BD /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA431C18A9222F0071F1BD /* Crashlytics.framework */; };
 		EB1634E318A223ED00DD17D5 /* CFMainProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634E218A223ED00DD17D5 /* CFMainProcessor.m */; };
 		EB1634E518A2694300DD17D5 /* mouse.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EB1634E418A2694300DD17D5 /* mouse.JPG */; };
 		EB1634F918A2723400DD17D5 /* CFListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634F418A2723400DD17D5 /* CFListCell.m */; };
@@ -121,6 +122,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91EA431C18A9222F0071F1BD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EB1634E118A223ED00DD17D5 /* CFMainProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMainProcessor.h; sourceTree = "<group>"; };
 		EB1634E218A223ED00DD17D5 /* CFMainProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainProcessor.m; sourceTree = "<group>"; };
 		EB1634E418A2694300DD17D5 /* mouse.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mouse.JPG; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB345BA18A1259F0075F419 /* AssetsLibrary.framework in Frameworks */,
+				91EA431D18A9222F0071F1BD /* Crashlytics.framework in Frameworks */,
 				EBEF5685189FCD76006DA9C8 /* CoreGraphics.framework in Frameworks */,
 				EBEF5687189FCD76006DA9C8 /* UIKit.framework in Frameworks */,
 				EBEF5683189FCD76006DA9C8 /* Foundation.framework in Frameworks */,
@@ -419,6 +422,7 @@
 		EBEF5681189FCD76006DA9C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91EA431C18A9222F0071F1BD /* Crashlytics.framework */,
 				EBB345B918A1259F0075F419 /* AssetsLibrary.framework */,
 				EBEF5682189FCD76006DA9C8 /* Foundation.framework */,
 				EBEF5684189FCD76006DA9C8 /* CoreGraphics.framework */,
@@ -964,6 +968,7 @@
 				EBEF567B189FCD76006DA9C8 /* Sources */,
 				EBEF567C189FCD76006DA9C8 /* Frameworks */,
 				EBEF567D189FCD76006DA9C8 /* Resources */,
+				91EA431B18A921EF0071F1BD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1056,6 +1061,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91EA431B18A921EF0071F1BD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBEF567B189FCD76006DA9C8 /* Sources */ = {
@@ -1269,6 +1290,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/animal/Developer/Projects/ShopifyCamFind,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
 				INFOPLIST_FILE = "CamFind/CamFind-Info.plist";
@@ -1283,6 +1308,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/animal/Developer/Projects/ShopifyCamFind,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
 				INFOPLIST_FILE = "CamFind/CamFind-Info.plist";
