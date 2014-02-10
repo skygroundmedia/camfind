@@ -16,13 +16,15 @@
 - (void)dealloc {
     self.imageDescriptionTextField = nil;
     self.tableView = nil;
+    self.tableViewBackView = nil;
+    self.statusBackView = nil;
+    self.statusIndicatorView = nil;
     self.statusLabel = nil;
 
-
-    [_statusBackView release];
-    [_statusIndicatorView release];
-    [_statusLabel release];
-    [_tableViewBackView release];
+    self.testImageView = nil;
+    self.testTokenLabel = nil;
+    self.testStatusLabel = nil;
+    
     [super dealloc];
 }
 
