@@ -10,7 +10,8 @@
 
 @interface CFListView : UIView
 
-@property (nonatomic, retain) IBOutlet UITextField  *imageDescriptionTextField;
+@property (retain, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @property (nonatomic, retain) IBOutlet UITableView  *tableView;
 @property (nonatomic, retain) IBOutlet UIView       *tableViewBackView;
 @property (nonatomic, retain) IBOutlet UIView       *statusBackView;
@@ -19,7 +20,6 @@
 
 @property (nonatomic, retain) IBOutlet UIImageView  *testImageView;
 @property (nonatomic, retain) IBOutlet UILabel      *testTokenLabel;
-@property (nonatomic, retain) IBOutlet UILabel      *testStatusLabel;
 
 - (void)tableViewHaveRows:(BOOL)haveRows;
 - (void)updateStatusWithProcessor:(CFMainProcessor *)processor;

@@ -13,7 +13,7 @@
 #import "CFMainProcessor.h"
 #import "CFDetailViewController.h"
 
-@interface CFListViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, IDPModelObserver, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIActionSheetDelegate>
+@interface CFListViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, IDPModelObserver, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIActionSheetDelegate>
 @property (nonatomic, readonly) CFListView                *listView;
 
 @property (nonatomic, retain) UIImagePickerController   *imagePickerController;
@@ -82,7 +82,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 #pragma mark Interface Handling
 
 - (IBAction)onSetDefaultDescription:(id)sender {
-    self.listView.imageDescriptionTextField.text = kSFDefaultDescription;
+    self.listView.searchBar.text = kSFDefaultDescription;
 }
 
 - (IBAction)onGetDescription:(id)sender {
@@ -92,10 +92,10 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 }
 
 - (IBAction)onYahooSearch:(id)sender {
-    [self.listView.imageDescriptionTextField resignFirstResponder];
+    [self.listView.searchBar resignFirstResponder];
     [self showLoadingView];
     self.processor = [CFMainProcessor object];
-    [self.processor searchImpctfulForDescription:self.listView.imageDescriptionTextField.text];
+    [self.processor searchImpctfulForDescription:self.listView.searchBar.text];
 }
 
 #pragma mark -
@@ -240,12 +240,11 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 }
 
 #pragma mark -
-#pragma mark UITextFieldDelegate
+#pragma mark UISearchBarDelegate
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
     [self onYahooSearch:nil];
-    return YES;
 }
 
 #pragma mark -

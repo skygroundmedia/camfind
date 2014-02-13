@@ -14,7 +14,7 @@
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
-    self.imageDescriptionTextField = nil;
+    self.searchBar = nil;
     self.tableView = nil;
     self.tableViewBackView = nil;
     self.statusBackView = nil;
@@ -23,8 +23,7 @@
 
     self.testImageView = nil;
     self.testTokenLabel = nil;
-    self.testStatusLabel = nil;
-    
+
     [super dealloc];
 }
 
@@ -48,7 +47,7 @@
     }
     self.statusIndicatorView.frame = frame;
     if (processor.status == processorStatusDescriptionGettingComplete) {
-        self.imageDescriptionTextField.text = processor.imageDescription;
+        self.searchBar.text = processor.imageDescription;
     }
     if (processor.status == processorStatusImageSendingComplete) {
         self.testTokenLabel.text = processor.token;
