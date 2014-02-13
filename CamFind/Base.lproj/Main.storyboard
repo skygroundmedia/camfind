@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ERW-e6-WyI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="sjF-tq-pzs">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -147,6 +147,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         <connections>
+                            <outlet property="mainBackView" destination="UVA-gy-KDl" id="cT1-l8-8Ue"/>
                             <outlet property="searchBar" destination="0ji-HJ-6XN" id="lfO-x4-z7a"/>
                             <outlet property="statusBackView" destination="zOb-Oc-uCW" id="W0L-en-CNF"/>
                             <outlet property="statusIndicatorView" destination="Vuq-WC-C4u" id="3dA-63-lPI"/>
@@ -157,7 +158,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera.png" id="WQU-jE-j5c"/>
                     <connections>
-                        <segue destination="pGD-k1-tgF" kind="push" identifier="toCFDetailViewController" id="m8G-Ts-G9I"/>
+                        <segue destination="ERW-e6-WyI" kind="custom" identifier="toCFDetailViewController" customClass="CFSequeToDetailController" id="RnV-2Y-yqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLE-3U-wnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,15 +170,15 @@
             <objects>
                 <viewController title="dsfg " id="pGD-k1-tgF" customClass="CFDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Isp-TS-QCP" customClass="CFDetailView">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="0Gn-0y-pX6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" id="VvX-zt-eQI">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -218,7 +219,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1795" y="70"/>
+            <point key="canvasLocation" x="2142" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMt-S3-W04">
@@ -235,11 +236,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="sjF-tq-pzs" kind="relationship" relationship="rootViewController" id="MJ5-pc-4fZ"/>
+                        <segue destination="pGD-k1-tgF" kind="relationship" relationship="rootViewController" id="PUa-Xe-ced"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="25" y="85"/>
+            <point key="canvasLocation" x="1754" y="70"/>
         </scene>
         <!--Contact View Controller - Feedback-->
         <scene sceneID="Ecn-N4-82h">

@@ -17,6 +17,7 @@
 @property (nonatomic, retain) IBOutlet UIView       *statusBackView;
 @property (nonatomic, retain) IBOutlet UIView       *statusIndicatorView;
 @property (nonatomic, retain) IBOutlet UILabel      *statusLabel;
+@property (retain, nonatomic) IBOutlet UIView *mainBackView;
 
 - (void)tableViewHaveRows:(BOOL)haveRows;
 - (void)updateStatusWithProcessor:(CFMainProcessor *)processor;

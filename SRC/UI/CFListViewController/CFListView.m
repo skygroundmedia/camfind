@@ -39,7 +39,8 @@
     self.statusBackView = nil;
     self.statusIndicatorView = nil;
     self.statusLabel = nil;
-
+    self.mainBackView = nil;
+    
     [super dealloc];
 }
 

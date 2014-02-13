@@ -7,14 +7,12 @@
 //
 
 #import "CFListViewController.h"
-#import "CFListView.h"
 #import "CFListCell.h"
 #import "CFListCellWOImage.h"
 #import "CFMainProcessor.h"
 #import "CFDetailViewController.h"
 
 @interface CFListViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, IDPModelObserver, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIActionSheetDelegate>
-@property (nonatomic, readonly) CFListView                *listView;
 
 @property (nonatomic, retain) UIImagePickerController   *imagePickerController;
 @property (nonatomic, retain) IDPLoadingView            *loadingView;
@@ -275,7 +273,8 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 #pragma mark Seque methods
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    CFDetailViewController *detailController = [segue destinationViewController];
+    UINavigationController *navigationController = [segue destinationViewController];
+    CFDetailViewController *detailController = (CFDetailViewController *)[navigationController topViewController];
     detailController.model = self.selectedModel;
 }
 

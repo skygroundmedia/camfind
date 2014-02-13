@@ -26,10 +26,12 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
@@ -52,16 +54,16 @@ IDPViewControllerViewOfClassGetterSynthesize (CFDetailView, detailView)
     IDPNonatomicRetainPropertySynthesize(_model, model);
     if (self.model.url) {
         self.url = [NSURL URLWithString:self.model.url];
+        [self.detailView.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
     }
 }
 
 #pragma mark -
 #pragma mark Interface Handling
 
-- (IBAction)onBack:(id)sender {
+- (IBAction)onBack:(id)sender {   
     self.model = nil;
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)onShare:(id)sender {
