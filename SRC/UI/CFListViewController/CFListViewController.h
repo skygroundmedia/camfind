@@ -8,7 +8,6 @@
 
 @interface CFListViewController : UIViewController
 
-- (IBAction)onSetDefaultDescription:(id)sender;
 - (IBAction)onYahooSearch:(id)sender;
 
 - (void)startImageProcessing;

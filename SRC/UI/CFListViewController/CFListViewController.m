@@ -88,9 +88,11 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 
 - (IBAction)onYahooSearch:(id)sender {
     [self.listView.searchBar resignFirstResponder];
-    [self showLoadingView];
-    self.processor = [CFMainProcessor object];
-    [self.processor searchImpctfulForDescription:self.listView.searchBar.text];
+    if (self.listView.searchBar.text.length) {
+        [self showLoadingView];
+        self.processor = [CFMainProcessor object];
+        [self.processor searchImpctfulForDescription:self.listView.searchBar.text];
+    }
 }
 
 #pragma mark -
