@@ -244,6 +244,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    [self onYahooSearch:nil];
     return YES;
 }
 

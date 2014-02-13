@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91EA431D18A9222F0071F1BD /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EA431C18A9222F0071F1BD /* Crashlytics.framework */; };
 		EB1634E318A223ED00DD17D5 /* CFMainProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634E218A223ED00DD17D5 /* CFMainProcessor.m */; };
 		EB1634E518A2694300DD17D5 /* mouse.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EB1634E418A2694300DD17D5 /* mouse.JPG */; };
 		EB1634F918A2723400DD17D5 /* CFListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634F418A2723400DD17D5 /* CFListCell.m */; };
@@ -20,6 +19,7 @@
 		EB16350718A27B6800DD17D5 /* Contactx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB16350118A27B6800DD17D5 /* Contactx2.png */; };
 		EB16350818A27B6800DD17D5 /* News.png in Resources */ = {isa = PBXBuildFile; fileRef = EB16350218A27B6800DD17D5 /* News.png */; };
 		EB16350918A27B6800DD17D5 /* Newsx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB16350318A27B6800DD17D5 /* Newsx2.png */; };
+		EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */; };
 		EBB345B718A102A30075F419 /* CFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B418A102A30075F419 /* CFDetailView.m */; };
 		EBB345B818A102A30075F419 /* CFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B618A102A30075F419 /* CFDetailViewController.m */; };
 		EBB345BA18A1259F0075F419 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB345B918A1259F0075F419 /* AssetsLibrary.framework */; };
@@ -122,7 +122,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		91EA431C18A9222F0071F1BD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EB1634E118A223ED00DD17D5 /* CFMainProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMainProcessor.h; sourceTree = "<group>"; };
 		EB1634E218A223ED00DD17D5 /* CFMainProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainProcessor.m; sourceTree = "<group>"; };
 		EB1634E418A2694300DD17D5 /* mouse.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mouse.JPG; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		EB16350118A27B6800DD17D5 /* Contactx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contactx2.png; sourceTree = "<group>"; };
 		EB16350218A27B6800DD17D5 /* News.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = News.png; sourceTree = "<group>"; };
 		EB16350318A27B6800DD17D5 /* Newsx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Newsx2.png; sourceTree = "<group>"; };
+		EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EBB345B318A102A30075F419 /* CFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailView.h; sourceTree = "<group>"; };
 		EBB345B418A102A30075F419 /* CFDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDetailView.m; sourceTree = "<group>"; };
 		EBB345B518A102A30075F419 /* CFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailViewController.h; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB345BA18A1259F0075F419 /* AssetsLibrary.framework in Frameworks */,
-				91EA431D18A9222F0071F1BD /* Crashlytics.framework in Frameworks */,
+				EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */,
 				EBEF5685189FCD76006DA9C8 /* CoreGraphics.framework in Frameworks */,
 				EBEF5687189FCD76006DA9C8 /* UIKit.framework in Frameworks */,
 				EBEF5683189FCD76006DA9C8 /* Foundation.framework in Frameworks */,
@@ -422,7 +422,7 @@
 		EBEF5681189FCD76006DA9C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				91EA431C18A9222F0071F1BD /* Crashlytics.framework */,
+				EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */,
 				EBB345B918A1259F0075F419 /* AssetsLibrary.framework */,
 				EBEF5682189FCD76006DA9C8 /* Foundation.framework */,
 				EBEF5684189FCD76006DA9C8 /* CoreGraphics.framework */,
@@ -1074,7 +1074,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
+			shellScript = "#./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1292,7 +1292,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/animal/Developer/Projects/ShopifyCamFind,
+					$SRCROOT,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
@@ -1310,7 +1310,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/animal/Developer/Projects/ShopifyCamFind,
+					$SRCROOT,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
