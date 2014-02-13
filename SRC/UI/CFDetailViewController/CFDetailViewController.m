@@ -11,6 +11,7 @@
 
 @interface CFDetailViewController () <UIWebViewDelegate>
 @property (nonatomic, retain) NSURL *url;
+@property (nonatomic, retain) UIPopoverController *popover;
 @end
 
 @implementation CFDetailViewController
@@ -25,6 +26,14 @@
     [super dealloc];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 #pragma mark
 #pragma mark View live cycle
 
@@ -32,7 +41,10 @@
     [super viewDidLoad];
     
     [self.detailView.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    
+    self.navigationController.navigationBar.hidden = false;
 }
+
 
 #pragma mark -
 #pragma mark Accessor methods
@@ -53,6 +65,25 @@ IDPViewControllerViewOfClassGetterSynthesize (CFDetailView, detailView)
     self.model = nil;
 //    [self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)onShare:(id)sender {
+    UIActivityViewController *activityController = [[[UIActivityViewController alloc] initWithActivityItems:@[self.url]
+                                                                                     applicationActivities:nil] autorelease];
+    
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [self presentViewController:activityController animated:YES completion:nil];
+//    } else {
+//        
+//        if (![self.popover isPopoverVisible]) {
+//            
+//            self.popover = [[UIPopoverController alloc] initWithContentViewController:activityController];
+//            [self.popover presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem
+//                                  permittedArrowDirections:UIPopoverArrowDirectionAny
+//                                                  animated:YES];
+//        }
+//        
+//    }
 }
 
 #pragma mark -

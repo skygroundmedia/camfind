@@ -18,7 +18,15 @@
 //}
 
 //- (void)baseInit {
-//    UITextField *textField = [self.searchBar valueForKey:@"_searchField"];
+//for (UIView *v in (SYSTEM_VERSION_LESS_THAN(@"7.0")?searchBar.subviews:[[searchBar.subviews objectAtIndex:0] subviews])) {
+//    
+//    if([v isKindOfClass:[UITextField class]]) {
+//        UITextField *textField = (UITextField *)v;
+//        [textField setFont:fREGULAR(@"15.0")];
+//        
+//        return;
+//    }
+//}
 //}
 
 #pragma mark -

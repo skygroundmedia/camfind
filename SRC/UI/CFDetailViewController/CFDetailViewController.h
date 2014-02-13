@@ -10,5 +10,6 @@
 @property (nonatomic, retain) CFRecordModel *model;
 
 - (IBAction)onBack:(id)sender;
+- (IBAction)onShare:(id)sender;
 
 @end
