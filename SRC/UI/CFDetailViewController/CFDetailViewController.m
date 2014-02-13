@@ -11,7 +11,6 @@
 
 @interface CFDetailViewController () <UIWebViewDelegate>
 @property (nonatomic, retain) NSURL *url;
-@property (nonatomic, retain) UIPopoverController *popover;
 @end
 
 @implementation CFDetailViewController
@@ -41,8 +40,6 @@
     [super viewDidLoad];
     
     [self.detailView.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
-    
-    self.navigationController.navigationBar.hidden = false;
 }
 
 
@@ -70,35 +67,15 @@ IDPViewControllerViewOfClassGetterSynthesize (CFDetailView, detailView)
 - (IBAction)onShare:(id)sender {
     UIActivityViewController *activityController = [[[UIActivityViewController alloc] initWithActivityItems:@[self.url]
                                                                                      applicationActivities:nil] autorelease];
-    
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        [self presentViewController:activityController animated:YES completion:nil];
-//    } else {
-//        
-//        if (![self.popover isPopoverVisible]) {
-//            
-//            self.popover = [[UIPopoverController alloc] initWithContentViewController:activityController];
-//            [self.popover presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem
-//                                  permittedArrowDirections:UIPopoverArrowDirectionAny
-//                                                  animated:YES];
-//        }
-//        
-//    }
+    [self presentViewController:activityController animated:YES completion:nil];
+
 }
 
 #pragma mark -
 #pragma mark UIWebViewDelegate
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-//    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-//    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-//    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    self.navigationItem.title = webView.request.URL.absoluteString;
 }
 
 @end

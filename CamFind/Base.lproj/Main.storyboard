@@ -5,38 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Splash View Controller-->
-        <scene sceneID="QMV-7Y-efm">
-            <objects>
-                <viewController id="8IG-qV-lRO" customClass="CFSplashViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Nhh-df-A8M" customClass="CFSplashView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CamFinder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uPc-nM-uVY">
-                                <rect key="frame" x="101" y="270" width="119" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4dz-X2-zGA"/>
-                    <connections>
-                        <segue destination="sjF-tq-pzs" kind="push" identifier="toMainViewController" id="Gsi-Bv-3fz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1XM-ho-pVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="55" y="85"/>
-        </scene>
         <!--Main View Controller-->
         <scene sceneID="Uss-qx-yEj">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="sjF-tq-pzs" customClass="CFMainViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bfl-Pb-K04"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -262,11 +235,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="8IG-qV-lRO" kind="relationship" relationship="rootViewController" id="ayS-MV-6fl"/>
+                        <segue destination="sjF-tq-pzs" kind="relationship" relationship="rootViewController" id="MJ5-pc-4fZ"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-392" y="85"/>
+            <point key="canvasLocation" x="25" y="85"/>
         </scene>
         <!--Contact View Controller - Feedback-->
         <scene sceneID="Ecn-N4-82h">
