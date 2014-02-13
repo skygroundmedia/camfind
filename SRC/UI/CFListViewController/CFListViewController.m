@@ -151,7 +151,6 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
         [CFMainProcessor saveImageToAlbum:image];
     }
-    self.listView.testImageView.image = image;
     [picker dismissViewControllerAnimated:YES completion:^{}];
     [self showLoadingView];
     self.processor = [CFMainProcessor object];

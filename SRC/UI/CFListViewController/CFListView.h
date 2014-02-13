@@ -18,9 +18,6 @@
 @property (nonatomic, retain) IBOutlet UIView       *statusIndicatorView;
 @property (nonatomic, retain) IBOutlet UILabel      *statusLabel;
 
-@property (nonatomic, retain) IBOutlet UIImageView  *testImageView;
-@property (nonatomic, retain) IBOutlet UILabel      *testTokenLabel;
-
 - (void)tableViewHaveRows:(BOOL)haveRows;
 - (void)updateStatusWithProcessor:(CFMainProcessor *)processor;
 

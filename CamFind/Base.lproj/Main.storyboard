@@ -121,7 +121,7 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="zOb-Oc-uCW">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="28"/>
+                                        <rect key="frame" x="0.0" y="44" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="Vuq-WC-C4u">
@@ -130,7 +130,7 @@
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="processor Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2tN-gC-8OT">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
+                                                <rect key="frame" x="0.0" y="11" width="320" height="13"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -140,11 +140,11 @@
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="L8D-Pw-NcV">
-                                        <rect key="frame" x="0.0" y="72" width="320" height="356"/>
+                                        <rect key="frame" x="0.0" y="79" width="320" height="420"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RnS-4A-eQK">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="357"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <connections>
@@ -154,36 +154,6 @@
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" id="CRM-Jq-Shi">
-                                        <rect key="frame" x="0.0" y="428" width="320" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Wnf-Kg-xJP">
-                                                <rect key="frame" x="5" y="2" width="65" height="65"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vg2-3F-12V">
-                                                <rect key="frame" x="78" y="35" width="235" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                                <state key="normal" title="search &quot;shirt&quot;" backgroundImage="back.png">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="onSetDefaultDescription:" destination="jrh-03-4Jn" eventType="touchUpInside" id="l3t-tU-dC1"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="token" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" id="vbF-Xd-8Bp">
-                                                <rect key="frame" x="78" y="5" width="235" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -199,8 +169,6 @@
                             <outlet property="statusLabel" destination="2tN-gC-8OT" id="Pxw-Mb-7OT"/>
                             <outlet property="tableView" destination="RnS-4A-eQK" id="SbH-Rl-gU4"/>
                             <outlet property="tableViewBackView" destination="L8D-Pw-NcV" id="Q4H-lW-mUs"/>
-                            <outlet property="testImageView" destination="Wnf-Kg-xJP" id="Cv4-eh-2v0"/>
-                            <outlet property="testTokenLabel" destination="vbF-Xd-8Bp" id="MSd-XT-ft8"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera.png" id="WQU-jE-j5c"/>
@@ -315,7 +283,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back.png" width="256" height="50"/>
         <image name="camera.png" width="30" height="30"/>
         <image name="feedback.png" width="30" height="30"/>
         <image name="news.png" width="30" height="30"/>

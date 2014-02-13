@@ -32,9 +32,6 @@
     self.statusIndicatorView = nil;
     self.statusLabel = nil;
 
-    self.testImageView = nil;
-    self.testTokenLabel = nil;
-
     [super dealloc];
 }
 
@@ -59,9 +56,6 @@
     self.statusIndicatorView.frame = frame;
     if (processor.status == processorStatusDescriptionGettingComplete) {
         self.searchBar.text = processor.imageDescription;
-    }
-    if (processor.status == processorStatusImageSendingComplete) {
-        self.testTokenLabel.text = processor.token;
     }
 }
 
