@@ -44,7 +44,7 @@ static NSString * const kSFDefsImageDescriptionKey      = @"sfImageDescription";
 #pragma mark -
 #pragma mark defaults
 
-static NSString * const kSFDefaultDescription           = @"glasses";
+static NSString * const kSFDefaultDescription           = @"shirt";
 static NSString * const kSFDefaultImageName             = @"image.jpg";
 
 static NSString * const kCFNewsURLString                = @"http://mobile.kdfc.com/";

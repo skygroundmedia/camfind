@@ -10,7 +10,6 @@
 
 - (IBAction)onSetDefaultDescription:(id)sender;
 - (IBAction)onYahooSearch:(id)sender;
-- (IBAction)onGetDescription:(id)sender;
 
 - (void)startImageProcessing;
 

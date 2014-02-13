@@ -10,6 +10,17 @@
 
 @implementation CFListView
 
+//-(id)initWithFrame:(CGRect)frame {
+//    if (self = [super initWithFrame:frame]) {
+//        [self baseInit];
+//    }
+//    return self;
+//}
+
+//- (void)baseInit {
+//    UITextField *textField = [self.searchBar valueForKey:@"_searchField"];
+//}
+
 #pragma mark -
 #pragma mark Initializations and Deallocations
 

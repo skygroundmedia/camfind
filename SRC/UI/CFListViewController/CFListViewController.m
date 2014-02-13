@@ -83,12 +83,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 
 - (IBAction)onSetDefaultDescription:(id)sender {
     self.listView.searchBar.text = kSFDefaultDescription;
-}
-
-- (IBAction)onGetDescription:(id)sender {
-    [self showLoadingView];
-    self.processor = [CFMainProcessor object];
-    [self.processor getDescriptionWithToken:self.listView.testTokenLabel.text];
+    [self onYahooSearch:nil];
 }
 
 - (IBAction)onYahooSearch:(id)sender {
