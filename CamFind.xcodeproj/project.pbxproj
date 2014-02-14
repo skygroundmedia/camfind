@@ -1146,7 +1146,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
+			shellScript = "./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1366,14 +1366,14 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					$SRCROOT,
+					"$(SRCROOT)/",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
 				INFOPLIST_FILE = "CamFind/CamFind-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/chas/Developer/Projects/ShopifyCamFind/SRC/Kits/TAGManager,
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1388,14 +1388,14 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					$SRCROOT,
+					"$(SRCROOT)/",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
 				INFOPLIST_FILE = "CamFind/CamFind-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/chas/Developer/Projects/ShopifyCamFind/SRC/Kits/TAGManager,
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
