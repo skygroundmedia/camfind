@@ -10,7 +10,7 @@
 
 @interface CFListViewController : UIViewController
 
-@property (nonatomic, readonly) CFListView                *listView;
+@property (nonatomic, readonly) CFListView        *listView;
 @property (nonatomic, readonly) CFRecordModel     *selectedModel;
 
 - (IBAction)onYahooSearch:(id)sender;

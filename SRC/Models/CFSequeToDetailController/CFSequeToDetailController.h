@@ -1,13 +1,13 @@
 //
-//  DCModalSegue.h
-//  DCSemiModalSegue
+//  CFSequeToDetailController.h
+//  CamFind
 //
-//  Created by zeta on 13/3/1.
-//  Copyright (c) 2013年 zeta. All rights reserved.
+//  Created by Alexandr Chernov on 2/13/14.
+//  Copyright (c) 2014 IDapGroup. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface DCModalSegue : UIStoryboardSegue
+@interface CFSequeToDetailController : UIStoryboardSegue
 
 @end

@@ -276,6 +276,7 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
     UINavigationController *navigationController = [segue destinationViewController];
     CFDetailViewController *detailController = (CFDetailViewController *)[navigationController topViewController];
     detailController.model = self.selectedModel;
+    detailController.listViewController = self;
 }
 
 @end

@@ -68,4 +68,9 @@
     }
 }
 
+- (void)animatedScale:(float)scale duration:(float)time {
+    
+}
+
+
 @end

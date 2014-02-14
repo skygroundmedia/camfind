@@ -38,6 +38,6 @@ typedef enum {
 - (void)getDescriptionWithToken:(NSString *)token;
 - (void)searchImpctfulForDescription:(NSString *)imageDescription;
 
-- (float)indicatorWidth;
+- (float)indicatorWidth;// 0 ... 1.0
 
 @end

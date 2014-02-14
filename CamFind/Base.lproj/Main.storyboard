@@ -78,7 +78,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <searchBar clipsSubviews="YES" contentMode="redraw" text="shirt" placeholder="Search" translucent="NO" id="0ji-HJ-6XN">
+                                            <searchBar clipsSubviews="YES" contentMode="redraw" placeholder="Search" translucent="NO" id="0ji-HJ-6XN">
                                                 <rect key="frame" x="0.0" y="0.0" width="245" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -197,7 +197,7 @@
                             <outlet property="webView" destination="VvX-zt-eQI" id="oie-bE-Aq1"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="ghjfgtyjuftyj" id="bNk-Qg-cOJ">
+                    <navigationItem key="navigationItem" id="bNk-Qg-cOJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="qeU-iY-JqW">
                             <connections>
                                 <action selector="onBack:" destination="pGD-k1-tgF" id="WPW-UN-pMN"/>
@@ -219,12 +219,11 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2142" y="70"/>
+            <point key="canvasLocation" x="2178" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMt-S3-W04">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5YW-Kc-8qR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="ERW-e6-WyI" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qmC-ED-zQx">
@@ -239,8 +238,9 @@
                         <segue destination="pGD-k1-tgF" kind="relationship" relationship="rootViewController" id="PUa-Xe-ced"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5YW-Kc-8qR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="70"/>
+            <point key="canvasLocation" x="1768" y="70"/>
         </scene>
         <!--Contact View Controller - Feedback-->
         <scene sceneID="Ecn-N4-82h">

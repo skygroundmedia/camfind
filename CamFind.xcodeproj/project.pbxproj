@@ -13,6 +13,7 @@
 		EB1634FA18A2723400DD17D5 /* CFListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1634F518A2723400DD17D5 /* CFListCell.xib */; };
 		EB1634FB18A2723400DD17D5 /* CFListCellWOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634F718A2723400DD17D5 /* CFListCellWOImage.m */; };
 		EB1634FC18A2723400DD17D5 /* CFListCellWOImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1634F818A2723400DD17D5 /* CFListCellWOImage.xib */; };
+		EB26638B18AE052B00E8EDE1 /* CFSequeToDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB26638A18AE052B00E8EDE1 /* CFSequeToDetailController.m */; };
 		EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */; };
 		EB30E6DC18ACCB2500D9ABF3 /* feedbackx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6DB18ACCB2500D9ABF3 /* feedbackx2.png */; };
 		EB30E6DE18ACCB2D00D9ABF3 /* newsx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6DD18ACCB2D00D9ABF3 /* newsx2.png */; };
@@ -21,7 +22,6 @@
 		EB30E6E418ACCF5800D9ABF3 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E318ACCF5800D9ABF3 /* feedback.png */; };
 		EB30E6E618ACCF6600D9ABF3 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E518ACCF6600D9ABF3 /* camera.png */; };
 		EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E918ACD0CB00D9ABF3 /* white.png */; };
-		EB30E6F118AD22EF00D9ABF3 /* CFSequeToDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB30E6F018AD22EF00D9ABF3 /* CFSequeToDetailController.m */; };
 		EBB345B718A102A30075F419 /* CFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B418A102A30075F419 /* CFDetailView.m */; };
 		EBB345B818A102A30075F419 /* CFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B618A102A30075F419 /* CFDetailViewController.m */; };
 		EBB345BA18A1259F0075F419 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB345B918A1259F0075F419 /* AssetsLibrary.framework */; };
@@ -133,6 +133,8 @@
 		EB1634F618A2723400DD17D5 /* CFListCellWOImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFListCellWOImage.h; sourceTree = "<group>"; };
 		EB1634F718A2723400DD17D5 /* CFListCellWOImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFListCellWOImage.m; sourceTree = "<group>"; };
 		EB1634F818A2723400DD17D5 /* CFListCellWOImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFListCellWOImage.xib; sourceTree = "<group>"; };
+		EB26638918AE052B00E8EDE1 /* CFSequeToDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSequeToDetailController.h; sourceTree = "<group>"; };
+		EB26638A18AE052B00E8EDE1 /* CFSequeToDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSequeToDetailController.m; sourceTree = "<group>"; };
 		EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EB30E6DB18ACCB2500D9ABF3 /* feedbackx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedbackx2.png; sourceTree = "<group>"; };
 		EB30E6DD18ACCB2D00D9ABF3 /* newsx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsx2.png; sourceTree = "<group>"; };
@@ -141,8 +143,6 @@
 		EB30E6E318ACCF5800D9ABF3 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
 		EB30E6E518ACCF6600D9ABF3 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		EB30E6E918ACD0CB00D9ABF3 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
-		EB30E6EF18AD22EF00D9ABF3 /* CFSequeToDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSequeToDetailController.h; sourceTree = "<group>"; };
-		EB30E6F018AD22EF00D9ABF3 /* CFSequeToDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSequeToDetailController.m; sourceTree = "<group>"; };
 		EBB345B318A102A30075F419 /* CFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailView.h; sourceTree = "<group>"; };
 		EBB345B418A102A30075F419 /* CFDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDetailView.m; sourceTree = "<group>"; };
 		EBB345B518A102A30075F419 /* CFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailViewController.h; sourceTree = "<group>"; };
@@ -386,8 +386,8 @@
 		EB30E6EB18AD087300D9ABF3 /* CFSequeToDetailController */ = {
 			isa = PBXGroup;
 			children = (
-				EB30E6EF18AD22EF00D9ABF3 /* CFSequeToDetailController.h */,
-				EB30E6F018AD22EF00D9ABF3 /* CFSequeToDetailController.m */,
+				EB26638918AE052B00E8EDE1 /* CFSequeToDetailController.h */,
+				EB26638A18AE052B00E8EDE1 /* CFSequeToDetailController.m */,
 			);
 			path = CFSequeToDetailController;
 			sourceTree = "<group>";
@@ -1103,7 +1103,6 @@
 				EBEF58BB189FCE34006DA9C8 /* IDPMachTimer.m in Sources */,
 				EBEF58C4189FCE34006DA9C8 /* NSObject+IDPOCExtensionsPrivate.m in Sources */,
 				EBEF58AF189FCE34006DA9C8 /* NSArray+IDPExtensions.m in Sources */,
-				EB30E6F118AD22EF00D9ABF3 /* CFSequeToDetailController.m in Sources */,
 				EBEF58B2189FCE34006DA9C8 /* NSDateComponents+IDPExtinsions.m in Sources */,
 				EBEF58D8189FCE34006DA9C8 /* Base64.m in Sources */,
 				EBEF58DA189FCE34006DA9C8 /* UNIBodyRequest.m in Sources */,
@@ -1129,6 +1128,7 @@
 				EBEF568F189FCD76006DA9C8 /* main.m in Sources */,
 				EBEF58E0189FCE34006DA9C8 /* UNIJsonNode.m in Sources */,
 				EBEF58C9189FCE34006DA9C8 /* IDPStackArray.m in Sources */,
+				EB26638B18AE052B00E8EDE1 /* CFSequeToDetailController.m in Sources */,
 				EBEF58D0189FCE34006DA9C8 /* UIEvent+IDPExtensions.m in Sources */,
 				EBB88EBF18A8E73900546BC2 /* CFImpctfulSearchContext.m in Sources */,
 				EBEF58CC189FCE34006DA9C8 /* IDPWeakArray.m in Sources */,

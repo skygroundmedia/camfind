@@ -55,6 +55,8 @@ static NSString * const kCFImpctfulHost                 = @"http://impctful.com/
 static double     const kCFMaxImageSize                 = 480.;// if MAX(height, wigth) > maxImageSize then scale = MAX / maxImageSize
 static float      const kCFGetDescriptionDelay          = 5.;
 static int        const kCFGetDescriptionRepeatCount    = 12;
+static float      const kCFDetailTransitionDuration     = 1.;
+static float      const kCFDetailTransitionScale        = 0.95;//scale for listViewController-view
 
 static NSString * const kCFGetPhotoPrompt               = @"Get photo from";
 static NSString * const kCFGetPhotoCancel               = @"Cancel";
