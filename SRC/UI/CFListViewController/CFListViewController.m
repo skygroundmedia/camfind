@@ -7,14 +7,12 @@
 //
 
 #import "CFListViewController.h"
-#import "CFListView.h"
 #import "CFListCell.h"
 #import "CFListCellWOImage.h"
 #import "CFMainProcessor.h"
 #import "CFDetailViewController.h"
 
-@interface CFListViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, IDPModelObserver, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIActionSheetDelegate>
-@property (nonatomic, readonly) CFListView                *listView;
+@interface CFListViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, IDPModelObserver, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, retain) UIImagePickerController   *imagePickerController;
 @property (nonatomic, retain) IDPLoadingView            *loadingView;
@@ -82,20 +80,17 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 #pragma mark Interface Handling
 
 - (IBAction)onSetDefaultDescription:(id)sender {
-    self.listView.imageDescriptionTextField.text = kSFDefaultDescription;
-}
-
-- (IBAction)onGetDescription:(id)sender {
-    [self showLoadingView];
-    self.processor = [CFMainProcessor object];
-    [self.processor getDescriptionWithToken:self.listView.testTokenLabel.text];
+    self.listView.searchBar.text = kSFDefaultDescription;
+    [self onYahooSearch:nil];
 }
 
 - (IBAction)onYahooSearch:(id)sender {
-    [self.listView.imageDescriptionTextField resignFirstResponder];
-    [self showLoadingView];
-    self.processor = [CFMainProcessor object];
-    [self.processor searchImpctfulForDescription:self.listView.imageDescriptionTextField.text];
+    [self.listView.searchBar resignFirstResponder];
+    if (self.listView.searchBar.text.length) {
+        [self showLoadingView];
+        self.processor = [CFMainProcessor object];
+        [self.processor searchImpctfulForDescription:self.listView.searchBar.text];
+    }
 }
 
 #pragma mark -
@@ -156,7 +151,6 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
         [CFMainProcessor saveImageToAlbum:image];
     }
-    self.listView.testImageView.image = image;
     [picker dismissViewControllerAnimated:YES completion:^{}];
     [self showLoadingView];
     self.processor = [CFMainProcessor object];
@@ -240,11 +234,11 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 }
 
 #pragma mark -
-#pragma mark UITextFieldDelegate
+#pragma mark UISearchBarDelegate
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return YES;
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    [self onYahooSearch:nil];
 }
 
 #pragma mark -
@@ -279,8 +273,10 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 #pragma mark Seque methods
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    CFDetailViewController *detailController = [segue destinationViewController];
+    UINavigationController *navigationController = [segue destinationViewController];
+    CFDetailViewController *detailController = (CFDetailViewController *)[navigationController topViewController];
     detailController.model = self.selectedModel;
+    detailController.listViewController = self;
 }
 
 @end

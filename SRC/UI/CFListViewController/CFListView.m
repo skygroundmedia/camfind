@@ -10,20 +10,36 @@
 
 @implementation CFListView
 
+//-(id)initWithFrame:(CGRect)frame {
+//    if (self = [super initWithFrame:frame]) {
+//        [self baseInit];
+//    }
+//    return self;
+//}
+
+//- (void)baseInit {
+//for (UIView *v in (SYSTEM_VERSION_LESS_THAN(@"7.0")?searchBar.subviews:[[searchBar.subviews objectAtIndex:0] subviews])) {
+//    
+//    if([v isKindOfClass:[UITextField class]]) {
+//        UITextField *textField = (UITextField *)v;
+//        [textField setFont:fREGULAR(@"15.0")];
+//        
+//        return;
+//    }
+//}
+//}
+
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
-    self.imageDescriptionTextField = nil;
+    self.searchBar = nil;
     self.tableView = nil;
     self.tableViewBackView = nil;
     self.statusBackView = nil;
     self.statusIndicatorView = nil;
     self.statusLabel = nil;
-
-    self.testImageView = nil;
-    self.testTokenLabel = nil;
-    self.testStatusLabel = nil;
+    self.mainBackView = nil;
     
     [super dealloc];
 }
@@ -48,11 +64,13 @@
     }
     self.statusIndicatorView.frame = frame;
     if (processor.status == processorStatusDescriptionGettingComplete) {
-        self.imageDescriptionTextField.text = processor.imageDescription;
-    }
-    if (processor.status == processorStatusImageSendingComplete) {
-        self.testTokenLabel.text = processor.token;
+        self.searchBar.text = processor.imageDescription;
     }
 }
+
+- (void)animatedScale:(float)scale duration:(float)time {
+    
+}
+
 
 @end

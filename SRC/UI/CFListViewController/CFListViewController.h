@@ -6,11 +6,14 @@
 //  Copyright (c) 2014 Alexandr Chernov. All rights reserved.
 //
 
+#import "CFListView.h"
+
 @interface CFListViewController : UIViewController
 
-- (IBAction)onSetDefaultDescription:(id)sender;
+@property (nonatomic, readonly) CFListView        *listView;
+@property (nonatomic, readonly) CFRecordModel     *selectedModel;
+
 - (IBAction)onYahooSearch:(id)sender;
-- (IBAction)onGetDescription:(id)sender;
 
 - (void)startImageProcessing;
 
