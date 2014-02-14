@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 IDapGroup. All rights reserved.
 //
 
-#import "CFSequeToDetailController.h"
+#import "CFSequeToDetail.h"
 #import "CFListViewController.h"
 #import "CFDetailViewController.h"
 

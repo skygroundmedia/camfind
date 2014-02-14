@@ -13,14 +13,14 @@
 		EB1634FA18A2723400DD17D5 /* CFListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1634F518A2723400DD17D5 /* CFListCell.xib */; };
 		EB1634FB18A2723400DD17D5 /* CFListCellWOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634F718A2723400DD17D5 /* CFListCellWOImage.m */; };
 		EB1634FC18A2723400DD17D5 /* CFListCellWOImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1634F818A2723400DD17D5 /* CFListCellWOImage.xib */; };
-		EB26638B18AE052B00E8EDE1 /* CFSequeToDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB26638A18AE052B00E8EDE1 /* CFSequeToDetailController.m */; };
+		EB26638B18AE052B00E8EDE1 /* CFSequeToDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EB26638A18AE052B00E8EDE1 /* CFSequeToDetail.m */; };
+		EB26639E18AE2EE800E8EDE1 /* iCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639818AE2EE800E8EDE1 /* iCamera.png */; };
+		EB26639F18AE2EE800E8EDE1 /* iCamerax2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639918AE2EE800E8EDE1 /* iCamerax2.png */; };
+		EB2663A018AE2EE800E8EDE1 /* iFeedback.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639A18AE2EE800E8EDE1 /* iFeedback.png */; };
+		EB2663A118AE2EE800E8EDE1 /* iFeedbackx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639B18AE2EE800E8EDE1 /* iFeedbackx2.png */; };
+		EB2663A218AE2EE800E8EDE1 /* iNews.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639C18AE2EE800E8EDE1 /* iNews.png */; };
+		EB2663A318AE2EE800E8EDE1 /* iNewsx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639D18AE2EE800E8EDE1 /* iNewsx2.png */; };
 		EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */; };
-		EB30E6DC18ACCB2500D9ABF3 /* feedbackx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6DB18ACCB2500D9ABF3 /* feedbackx2.png */; };
-		EB30E6DE18ACCB2D00D9ABF3 /* newsx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6DD18ACCB2D00D9ABF3 /* newsx2.png */; };
-		EB30E6E018ACCB4200D9ABF3 /* camerax2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6DF18ACCB4200D9ABF3 /* camerax2.png */; };
-		EB30E6E218ACCF2000D9ABF3 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E118ACCF2000D9ABF3 /* news.png */; };
-		EB30E6E418ACCF5800D9ABF3 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E318ACCF5800D9ABF3 /* feedback.png */; };
-		EB30E6E618ACCF6600D9ABF3 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E518ACCF6600D9ABF3 /* camera.png */; };
 		EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E918ACD0CB00D9ABF3 /* white.png */; };
 		EBB345B718A102A30075F419 /* CFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B418A102A30075F419 /* CFDetailView.m */; };
 		EBB345B818A102A30075F419 /* CFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B618A102A30075F419 /* CFDetailViewController.m */; };
@@ -133,15 +133,15 @@
 		EB1634F618A2723400DD17D5 /* CFListCellWOImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFListCellWOImage.h; sourceTree = "<group>"; };
 		EB1634F718A2723400DD17D5 /* CFListCellWOImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFListCellWOImage.m; sourceTree = "<group>"; };
 		EB1634F818A2723400DD17D5 /* CFListCellWOImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFListCellWOImage.xib; sourceTree = "<group>"; };
-		EB26638918AE052B00E8EDE1 /* CFSequeToDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSequeToDetailController.h; sourceTree = "<group>"; };
-		EB26638A18AE052B00E8EDE1 /* CFSequeToDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSequeToDetailController.m; sourceTree = "<group>"; };
+		EB26638918AE052B00E8EDE1 /* CFSequeToDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSequeToDetail.h; sourceTree = "<group>"; };
+		EB26638A18AE052B00E8EDE1 /* CFSequeToDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSequeToDetail.m; sourceTree = "<group>"; };
+		EB26639818AE2EE800E8EDE1 /* iCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCamera.png; sourceTree = "<group>"; };
+		EB26639918AE2EE800E8EDE1 /* iCamerax2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCamerax2.png; sourceTree = "<group>"; };
+		EB26639A18AE2EE800E8EDE1 /* iFeedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iFeedback.png; sourceTree = "<group>"; };
+		EB26639B18AE2EE800E8EDE1 /* iFeedbackx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iFeedbackx2.png; sourceTree = "<group>"; };
+		EB26639C18AE2EE800E8EDE1 /* iNews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iNews.png; sourceTree = "<group>"; };
+		EB26639D18AE2EE800E8EDE1 /* iNewsx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iNewsx2.png; sourceTree = "<group>"; };
 		EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		EB30E6DB18ACCB2500D9ABF3 /* feedbackx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedbackx2.png; sourceTree = "<group>"; };
-		EB30E6DD18ACCB2D00D9ABF3 /* newsx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsx2.png; sourceTree = "<group>"; };
-		EB30E6DF18ACCB4200D9ABF3 /* camerax2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camerax2.png; sourceTree = "<group>"; };
-		EB30E6E118ACCF2000D9ABF3 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
-		EB30E6E318ACCF5800D9ABF3 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
-		EB30E6E518ACCF6600D9ABF3 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		EB30E6E918ACD0CB00D9ABF3 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		EBB345B318A102A30075F419 /* CFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailView.h; sourceTree = "<group>"; };
 		EBB345B418A102A30075F419 /* CFDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDetailView.m; sourceTree = "<group>"; };
@@ -373,12 +373,12 @@
 		EB1634FD18A27B6800DD17D5 /* TabBarIcons */ = {
 			isa = PBXGroup;
 			children = (
-				EB30E6E118ACCF2000D9ABF3 /* news.png */,
-				EB30E6DD18ACCB2D00D9ABF3 /* newsx2.png */,
-				EB30E6DB18ACCB2500D9ABF3 /* feedbackx2.png */,
-				EB30E6E318ACCF5800D9ABF3 /* feedback.png */,
-				EB30E6E518ACCF6600D9ABF3 /* camera.png */,
-				EB30E6DF18ACCB4200D9ABF3 /* camerax2.png */,
+				EB26639818AE2EE800E8EDE1 /* iCamera.png */,
+				EB26639918AE2EE800E8EDE1 /* iCamerax2.png */,
+				EB26639A18AE2EE800E8EDE1 /* iFeedback.png */,
+				EB26639B18AE2EE800E8EDE1 /* iFeedbackx2.png */,
+				EB26639C18AE2EE800E8EDE1 /* iNews.png */,
+				EB26639D18AE2EE800E8EDE1 /* iNewsx2.png */,
 			);
 			path = TabBarIcons;
 			sourceTree = "<group>";
@@ -386,8 +386,8 @@
 		EB30E6EB18AD087300D9ABF3 /* CFSequeToDetailController */ = {
 			isa = PBXGroup;
 			children = (
-				EB26638918AE052B00E8EDE1 /* CFSequeToDetailController.h */,
-				EB26638A18AE052B00E8EDE1 /* CFSequeToDetailController.m */,
+				EB26638918AE052B00E8EDE1 /* CFSequeToDetail.h */,
+				EB26638A18AE052B00E8EDE1 /* CFSequeToDetail.m */,
 			);
 			path = CFSequeToDetailController;
 			sourceTree = "<group>";
@@ -1052,18 +1052,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB30E6E618ACCF6600D9ABF3 /* camera.png in Resources */,
-				EB30E6E418ACCF5800D9ABF3 /* feedback.png in Resources */,
+				EB2663A118AE2EE800E8EDE1 /* iFeedbackx2.png in Resources */,
 				EB1634E518A2694300DD17D5 /* mouse.JPG in Resources */,
-				EB30E6E218ACCF2000D9ABF3 /* news.png in Resources */,
-				EB30E6DC18ACCB2500D9ABF3 /* feedbackx2.png in Resources */,
 				EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */,
+				EB2663A018AE2EE800E8EDE1 /* iFeedback.png in Resources */,
+				EB2663A318AE2EE800E8EDE1 /* iNewsx2.png in Resources */,
 				EB1634FA18A2723400DD17D5 /* CFListCell.xib in Resources */,
 				EBEF56B9189FCD9E006DA9C8 /* back.png in Resources */,
-				EB30E6DE18ACCB2D00D9ABF3 /* newsx2.png in Resources */,
+				EB26639E18AE2EE800E8EDE1 /* iCamera.png in Resources */,
 				EB1634FC18A2723400DD17D5 /* CFListCellWOImage.xib in Resources */,
+				EB26639F18AE2EE800E8EDE1 /* iCamerax2.png in Resources */,
+				EB2663A218AE2EE800E8EDE1 /* iNews.png in Resources */,
 				EBEF569B189FCD76006DA9C8 /* Images.xcassets in Resources */,
-				EB30E6E018ACCB4200D9ABF3 /* camerax2.png in Resources */,
 				EBEF568D189FCD76006DA9C8 /* InfoPlist.strings in Resources */,
 				EBEF5696189FCD76006DA9C8 /* Main.storyboard in Resources */,
 			);
@@ -1128,7 +1128,7 @@
 				EBEF568F189FCD76006DA9C8 /* main.m in Sources */,
 				EBEF58E0189FCE34006DA9C8 /* UNIJsonNode.m in Sources */,
 				EBEF58C9189FCE34006DA9C8 /* IDPStackArray.m in Sources */,
-				EB26638B18AE052B00E8EDE1 /* CFSequeToDetailController.m in Sources */,
+				EB26638B18AE052B00E8EDE1 /* CFSequeToDetail.m in Sources */,
 				EBEF58D0189FCE34006DA9C8 /* UIEvent+IDPExtensions.m in Sources */,
 				EBB88EBF18A8E73900546BC2 /* CFImpctfulSearchContext.m in Sources */,
 				EBEF58CC189FCE34006DA9C8 /* IDPWeakArray.m in Sources */,
