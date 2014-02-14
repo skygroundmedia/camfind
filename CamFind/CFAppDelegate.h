@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TAGContainer.h"
+#import "TAGContainerOpener.h"
+#import "TAGManager.h"
 
 @interface CFAppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -20,6 +20,13 @@
 		EB2663A118AE2EE800E8EDE1 /* iFeedbackx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639B18AE2EE800E8EDE1 /* iFeedbackx2.png */; };
 		EB2663A218AE2EE800E8EDE1 /* iNews.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639C18AE2EE800E8EDE1 /* iNews.png */; };
 		EB2663A318AE2EE800E8EDE1 /* iNewsx2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639D18AE2EE800E8EDE1 /* iNewsx2.png */; };
+		EB2663AB18AE3A0500E8EDE1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663AA18AE3A0500E8EDE1 /* AdSupport.framework */; };
+		EB2663AD18AE3A1200E8EDE1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663AC18AE3A1200E8EDE1 /* CoreData.framework */; };
+		EB2663AF18AE3A2300E8EDE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663AE18AE3A2300E8EDE1 /* SystemConfiguration.framework */; };
+		EB2663B118AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663B018AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a */; };
+		EB2663B518AE408500E8EDE1 /* CFTAGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2663B418AE408500E8EDE1 /* CFTAGManager.m */; };
+		EB2663B818AE648800E8EDE1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663B618AE646800E8EDE1 /* libz.dylib */; };
+		EB2663BC18AE6CE500E8EDE1 /* GTM-TS8WFN.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB2663BB18AE6CE500E8EDE1 /* GTM-TS8WFN.plist */; };
 		EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */; };
 		EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E918ACD0CB00D9ABF3 /* white.png */; };
 		EBB345B718A102A30075F419 /* CFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B418A102A30075F419 /* CFDetailView.m */; };
@@ -141,6 +148,19 @@
 		EB26639B18AE2EE800E8EDE1 /* iFeedbackx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iFeedbackx2.png; sourceTree = "<group>"; };
 		EB26639C18AE2EE800E8EDE1 /* iNews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iNews.png; sourceTree = "<group>"; };
 		EB26639D18AE2EE800E8EDE1 /* iNewsx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iNewsx2.png; sourceTree = "<group>"; };
+		EB2663A518AE39AD00E8EDE1 /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		EB2663A618AE39AD00E8EDE1 /* TAGContainerOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		EB2663A718AE39AD00E8EDE1 /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		EB2663A818AE39AD00E8EDE1 /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		EB2663A918AE39AD00E8EDE1 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		EB2663AA18AE3A0500E8EDE1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		EB2663AC18AE3A1200E8EDE1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EB2663AE18AE3A2300E8EDE1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EB2663B018AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		EB2663B318AE408500E8EDE1 /* CFTAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTAGManager.h; sourceTree = "<group>"; };
+		EB2663B418AE408500E8EDE1 /* CFTAGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTAGManager.m; sourceTree = "<group>"; };
+		EB2663B618AE646800E8EDE1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EB2663BB18AE6CE500E8EDE1 /* GTM-TS8WFN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GTM-TS8WFN.plist"; sourceTree = "<group>"; };
 		EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EB30E6E918ACD0CB00D9ABF3 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		EBB345B318A102A30075F419 /* CFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailView.h; sourceTree = "<group>"; };
@@ -327,6 +347,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2663AB18AE3A0500E8EDE1 /* AdSupport.framework in Frameworks */,
+				EB2663B818AE648800E8EDE1 /* libz.dylib in Frameworks */,
+				EB2663AF18AE3A2300E8EDE1 /* SystemConfiguration.framework in Frameworks */,
+				EB2663AD18AE3A1200E8EDE1 /* CoreData.framework in Frameworks */,
+				EB2663B118AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a in Frameworks */,
 				EBB345BA18A1259F0075F419 /* AssetsLibrary.framework in Frameworks */,
 				EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */,
 				EBEF5685189FCD76006DA9C8 /* CoreGraphics.framework in Frameworks */,
@@ -383,6 +408,28 @@
 			path = TabBarIcons;
 			sourceTree = "<group>";
 		};
+		EB2663A418AE39AD00E8EDE1 /* TAGManager */ = {
+			isa = PBXGroup;
+			children = (
+				EB2663B018AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a */,
+				EB2663A518AE39AD00E8EDE1 /* TAGContainer.h */,
+				EB2663A618AE39AD00E8EDE1 /* TAGContainerOpener.h */,
+				EB2663A718AE39AD00E8EDE1 /* TAGDataLayer.h */,
+				EB2663A818AE39AD00E8EDE1 /* TAGLogger.h */,
+				EB2663A918AE39AD00E8EDE1 /* TAGManager.h */,
+			);
+			path = TAGManager;
+			sourceTree = "<group>";
+		};
+		EB2663B218AE408500E8EDE1 /* CFTAGManager */ = {
+			isa = PBXGroup;
+			children = (
+				EB2663B318AE408500E8EDE1 /* CFTAGManager.h */,
+				EB2663B418AE408500E8EDE1 /* CFTAGManager.m */,
+			);
+			path = CFTAGManager;
+			sourceTree = "<group>";
+		};
 		EB30E6EB18AD087300D9ABF3 /* CFSequeToDetailController */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +483,10 @@
 		EBEF5681189FCD76006DA9C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB2663B618AE646800E8EDE1 /* libz.dylib */,
+				EB2663AE18AE3A2300E8EDE1 /* SystemConfiguration.framework */,
+				EB2663AC18AE3A1200E8EDE1 /* CoreData.framework */,
+				EB2663AA18AE3A0500E8EDE1 /* AdSupport.framework */,
 				EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */,
 				EBB345B918A1259F0075F419 /* AssetsLibrary.framework */,
 				EBEF5682189FCD76006DA9C8 /* Foundation.framework */,
@@ -511,12 +562,14 @@
 		EBEF57DB189FCE34006DA9C8 /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
+				EB2663BB18AE6CE500E8EDE1 /* GTM-TS8WFN.plist */,
 				EBEF57DC189FCE34006DA9C8 /* CFConstants.h */,
 				EB1634E018A223ED00DD17D5 /* CFMainProcessor */,
 				EBEF57E2189FCE34006DA9C8 /* CFPostImageContext */,
 				EBEF57DF189FCE34006DA9C8 /* CFGetDescriptionContext */,
 				EBB88EBC18A8E73900546BC2 /* CFImpctfulSearchContext */,
 				EBEF57E5189FCE34006DA9C8 /* CFXMLProcessor */,
+				EB2663B218AE408500E8EDE1 /* CFTAGManager */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -551,6 +604,7 @@
 		EBEF57EB189FCE34006DA9C8 /* Kits */ = {
 			isa = PBXGroup;
 			children = (
+				EB2663A418AE39AD00E8EDE1 /* TAGManager */,
 				EBEF57EC189FCE34006DA9C8 /* IDPKit */,
 				EBEF585E189FCE34006DA9C8 /* SFKit */,
 				EBEF5861189FCE34006DA9C8 /* UnirestKit */,
@@ -1055,6 +1109,7 @@
 				EB2663A118AE2EE800E8EDE1 /* iFeedbackx2.png in Resources */,
 				EB1634E518A2694300DD17D5 /* mouse.JPG in Resources */,
 				EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */,
+				EB2663BC18AE6CE500E8EDE1 /* GTM-TS8WFN.plist in Resources */,
 				EB2663A018AE2EE800E8EDE1 /* iFeedback.png in Resources */,
 				EB2663A318AE2EE800E8EDE1 /* iNewsx2.png in Resources */,
 				EB1634FA18A2723400DD17D5 /* CFListCell.xib in Resources */,
@@ -1166,6 +1221,7 @@
 				EBEF58D4189FCE34006DA9C8 /* UITableView+IDPCellLoading.m in Sources */,
 				EBEF58F3189FCE34006DA9C8 /* CFNewsView.m in Sources */,
 				EBEF58C8189FCE34006DA9C8 /* IDPRetainingDictionary.m in Sources */,
+				EB2663B518AE408500E8EDE1 /* CFTAGManager.m in Sources */,
 				EBEF58AE189FCE34006DA9C8 /* IDPMath.mm in Sources */,
 				EBEF58C6189FCE34006DA9C8 /* IDPRetainingReference.m in Sources */,
 				EBEF58F1189FCE34006DA9C8 /* CFMainViewController.m in Sources */,
@@ -1315,6 +1371,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
 				INFOPLIST_FILE = "CamFind/CamFind-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chas/Developer/Projects/ShopifyCamFind/SRC/Kits/TAGManager,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1333,6 +1393,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
 				INFOPLIST_FILE = "CamFind/CamFind-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chas/Developer/Projects/ShopifyCamFind/SRC/Kits/TAGManager,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

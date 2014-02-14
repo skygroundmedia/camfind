@@ -24,4 +24,6 @@
 
     #import "CFRecordModel.h"
 
+    #import "CFTAGManager.h"
+
 #endif

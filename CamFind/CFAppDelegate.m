@@ -9,41 +9,51 @@
 #import "CFAppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
 
+@interface ContainerNotifier : NSObject<TAGContainerOpenerNotifier>
+@property (atomic, strong) TAGContainer *container;
+@end
+@implementation ContainerNotifier
+- (void)containerAvailable:(TAGContainer *)container {
+    [CFTAGManager setContainer:container];
+}
+@end
+
+@interface CFAppDelegate ()
+@property (nonatomic, retain) TAGManager *tagManager;
+@end
+
 @implementation CFAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Crashlytics startWithAPIKey:@"c4dcde3d75563274731fe0519d4220e84b151323"];
-    
+
+    self.tagManager = [TAGManager instance];
+    /*
+     * Opens a container and calls notifier when container is opened.
+     *
+     * @param containerId The ID of the container to load.
+     * @param tagManager The TAGManager instance for getting the container.
+     * @param openType The choice of how to open the container.
+     * @param timeout The timeout period (default is 2.0 seconds).
+     * @param notifier The notifier which will be called when the container is
+     *        available.
+     */
+    [TAGContainerOpener openContainerWithId:@"GTM-TS8WFN"   // Update with your Container ID.
+                                 tagManager:self.tagManager
+                                   openType:kTAGOpenTypePreferNonDefault
+                                    timeout:nil
+                                   notifier:[[ContainerNotifier alloc] init]];
     return YES;
 }
 							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)applicationWillResignActive:(UIApplication *)application{
+    NSLog(@"ResignActive");
+    [CFTAGManager pauseTimer];
+    [CFTAGManager sendTime];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [CFTAGManager startTimer];
 }
 
 @end

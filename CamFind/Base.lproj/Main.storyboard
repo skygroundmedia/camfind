@@ -55,7 +55,7 @@
                             <outlet property="webView" destination="hL7-yo-wPB" id="8pO-vQ-dBN"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="news.png" id="hEK-KV-eje"/>
+                    <tabBarItem key="tabBarItem" title="News" image="iNews.png" id="hEK-KV-eje"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eq6-Nc-J17" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,7 +156,7 @@
                             <outlet property="tableViewBackView" destination="L8D-Pw-NcV" id="Q4H-lW-mUs"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" image="camera.png" id="WQU-jE-j5c"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="iCamera.png" id="WQU-jE-j5c"/>
                     <connections>
                         <segue destination="ERW-e6-WyI" kind="custom" identifier="toCFDetailViewController" customClass="CFSequeToDetailController" id="RnV-2Y-yqR"/>
                     </connections>
@@ -266,7 +266,7 @@
                             <outlet property="webView" destination="YyK-Cw-Kes" id="03s-jF-6Ue"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feedback" image="feedback.png" id="Bsw-TT-j7T"/>
+                    <tabBarItem key="tabBarItem" title="Feedback" image="iFeedback.png" id="Bsw-TT-j7T"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYG-I3-GcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,9 +274,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.png" width="30" height="30"/>
-        <image name="feedback.png" width="30" height="30"/>
-        <image name="news.png" width="30" height="30"/>
+        <image name="iCamera.png" width="30" height="30"/>
+        <image name="iFeedback.png" width="30" height="30"/>
+        <image name="iNews.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
