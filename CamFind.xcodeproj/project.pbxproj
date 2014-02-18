@@ -1077,6 +1077,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = IDapGroup;
 				TargetAttributes = {
+					EBEF567E189FCD76006DA9C8 = {
+						DevelopmentTeam = 8SYM8FR9Z2;
+					};
 					EBEF569F189FCD76006DA9C8 = {
 						TestTargetID = EBEF567E189FCD76006DA9C8;
 					};
@@ -1146,7 +1149,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
+			shellScript = "./Crashlytics.framework/run ed60b7f019cab46431bad5d3b5a09e299f1fab0c 7a7c3113ac1f1d5634bf49f39417370aa19c8f2e16c9255b9949b9e2279938ca";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1364,6 +1367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/",
@@ -1386,6 +1390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/",
