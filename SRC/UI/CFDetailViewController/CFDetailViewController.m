@@ -26,12 +26,13 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [TAGMANAGER pushOpenScreenEventWithScreenName:NSStringFromClass([self.view class])];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+    [super viewDidDisappear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 

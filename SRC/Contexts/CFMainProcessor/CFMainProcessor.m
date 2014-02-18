@@ -241,12 +241,14 @@ static NSArray *__processorStatusStrings;
         self.token = self.postImageContext.token;
         self.status = processorStatusImageSendingComplete;
         [self getDescriptionWithToken:self.postImageContext.token];
+        [TAGMANAGER sendCamFindPost];
     }
     if (theModel == self.getDescriptionContext) {
         if (self.getDescriptionContext.imageDescription) {
             self.imageDescription = self.getDescriptionContext.imageDescription;
             self.status = processorStatusDescriptionGettingComplete;
             [self searchImpctfulForDescription:self.getDescriptionContext.imageDescription];
+            [TAGMANAGER sendCamFindDescription:self.imageDescription];
         } else {
             [self startDescriptionGetting];
         }
@@ -255,6 +257,10 @@ static NSArray *__processorStatusStrings;
         self.xmlData = self.getSearchContext.xmlData;
         self.status = processorStatusImpctfulSearchingComplete;
         [self processXML:self.getSearchContext.xmlData];
+        [TAGMANAGER sendImpctfulSearch:self.getSearchContext.searchString];
+        if (!self.result.count) {
+            [TAGMANAGER sendEmptyImpctfulSearch:self.getSearchContext.searchString];
+        }
     }
 }
 

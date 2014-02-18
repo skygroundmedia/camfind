@@ -6,6 +6,6 @@
 //  Copyright (c) 2014 Alexandr Chernov. All rights reserved.
 //
 
-@interface CFContactViewController : UIViewController
+@interface CFContactViewController : CFViewController
 
 @end

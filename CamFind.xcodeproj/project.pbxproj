@@ -13,6 +13,9 @@
 		EB1634FA18A2723400DD17D5 /* CFListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1634F518A2723400DD17D5 /* CFListCell.xib */; };
 		EB1634FB18A2723400DD17D5 /* CFListCellWOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634F718A2723400DD17D5 /* CFListCellWOImage.m */; };
 		EB1634FC18A2723400DD17D5 /* CFListCellWOImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1634F818A2723400DD17D5 /* CFListCellWOImage.xib */; };
+		EB1895C018B3514D00873CB8 /* CFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1895BF18B3514D00873CB8 /* CFViewController.m */; };
+		EB1895C818B36E4400873CB8 /* GTM-TS8WFN.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1895C718B36E4400873CB8 /* GTM-TS8WFN.plist */; };
+		EB1895CA18B36E5700873CB8 /* GTM-TS8WFN in Resources */ = {isa = PBXBuildFile; fileRef = EB1895C918B36E5700873CB8 /* GTM-TS8WFN */; };
 		EB26638B18AE052B00E8EDE1 /* CFSequeToDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EB26638A18AE052B00E8EDE1 /* CFSequeToDetail.m */; };
 		EB26639E18AE2EE800E8EDE1 /* iCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639818AE2EE800E8EDE1 /* iCamera.png */; };
 		EB26639F18AE2EE800E8EDE1 /* iCamerax2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB26639918AE2EE800E8EDE1 /* iCamerax2.png */; };
@@ -26,7 +29,7 @@
 		EB2663B118AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663B018AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a */; };
 		EB2663B518AE408500E8EDE1 /* CFTAGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2663B418AE408500E8EDE1 /* CFTAGManager.m */; };
 		EB2663B818AE648800E8EDE1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663B618AE646800E8EDE1 /* libz.dylib */; };
-		EB2663BC18AE6CE500E8EDE1 /* GTM-TS8WFN.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB2663BB18AE6CE500E8EDE1 /* GTM-TS8WFN.plist */; };
+		EB26FD9218B235A800741E4E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB26FD9118B235A800741E4E /* CoreLocation.framework */; };
 		EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */; };
 		EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E918ACD0CB00D9ABF3 /* white.png */; };
 		EBB345B718A102A30075F419 /* CFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B418A102A30075F419 /* CFDetailView.m */; };
@@ -140,6 +143,10 @@
 		EB1634F618A2723400DD17D5 /* CFListCellWOImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFListCellWOImage.h; sourceTree = "<group>"; };
 		EB1634F718A2723400DD17D5 /* CFListCellWOImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFListCellWOImage.m; sourceTree = "<group>"; };
 		EB1634F818A2723400DD17D5 /* CFListCellWOImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFListCellWOImage.xib; sourceTree = "<group>"; };
+		EB1895BE18B3514D00873CB8 /* CFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFViewController.h; sourceTree = "<group>"; };
+		EB1895BF18B3514D00873CB8 /* CFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFViewController.m; sourceTree = "<group>"; };
+		EB1895C718B36E4400873CB8 /* GTM-TS8WFN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GTM-TS8WFN.plist"; sourceTree = "<group>"; };
+		EB1895C918B36E5700873CB8 /* GTM-TS8WFN */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-TS8WFN"; sourceTree = "<group>"; };
 		EB26638918AE052B00E8EDE1 /* CFSequeToDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSequeToDetail.h; sourceTree = "<group>"; };
 		EB26638A18AE052B00E8EDE1 /* CFSequeToDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSequeToDetail.m; sourceTree = "<group>"; };
 		EB26639818AE2EE800E8EDE1 /* iCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCamera.png; sourceTree = "<group>"; };
@@ -160,7 +167,7 @@
 		EB2663B318AE408500E8EDE1 /* CFTAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTAGManager.h; sourceTree = "<group>"; };
 		EB2663B418AE408500E8EDE1 /* CFTAGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTAGManager.m; sourceTree = "<group>"; };
 		EB2663B618AE646800E8EDE1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		EB2663BB18AE6CE500E8EDE1 /* GTM-TS8WFN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GTM-TS8WFN.plist"; sourceTree = "<group>"; };
+		EB26FD9118B235A800741E4E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EB30E6E918ACD0CB00D9ABF3 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		EBB345B318A102A30075F419 /* CFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailView.h; sourceTree = "<group>"; };
@@ -347,6 +354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB26FD9218B235A800741E4E /* CoreLocation.framework in Frameworks */,
 				EB2663AB18AE3A0500E8EDE1 /* AdSupport.framework in Frameworks */,
 				EB2663B818AE648800E8EDE1 /* libz.dylib in Frameworks */,
 				EB2663AF18AE3A2300E8EDE1 /* SystemConfiguration.framework in Frameworks */,
@@ -406,6 +414,15 @@
 				EB26639D18AE2EE800E8EDE1 /* iNewsx2.png */,
 			);
 			path = TabBarIcons;
+			sourceTree = "<group>";
+		};
+		EB1895BD18B3513500873CB8 /* CFViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB1895BE18B3514D00873CB8 /* CFViewController.h */,
+				EB1895BF18B3514D00873CB8 /* CFViewController.m */,
+			);
+			path = CFViewController;
 			sourceTree = "<group>";
 		};
 		EB2663A418AE39AD00E8EDE1 /* TAGManager */ = {
@@ -483,6 +500,7 @@
 		EBEF5681189FCD76006DA9C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB26FD9118B235A800741E4E /* CoreLocation.framework */,
 				EB2663B618AE646800E8EDE1 /* libz.dylib */,
 				EB2663AE18AE3A2300E8EDE1 /* SystemConfiguration.framework */,
 				EB2663AC18AE3A1200E8EDE1 /* CoreData.framework */,
@@ -562,7 +580,8 @@
 		EBEF57DB189FCE34006DA9C8 /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
-				EB2663BB18AE6CE500E8EDE1 /* GTM-TS8WFN.plist */,
+				EB1895C918B36E5700873CB8 /* GTM-TS8WFN */,
+				EB1895C718B36E4400873CB8 /* GTM-TS8WFN.plist */,
 				EBEF57DC189FCE34006DA9C8 /* CFConstants.h */,
 				EB1634E018A223ED00DD17D5 /* CFMainProcessor */,
 				EBEF57E2189FCE34006DA9C8 /* CFPostImageContext */,
@@ -878,16 +897,8 @@
 				EBEF585F189FCE34006DA9C8 /* SFMacros.h */,
 				EBB345BC18A133090075F419 /* UIImage+GRResize.h */,
 				EBB345BD18A133090075F419 /* UIImage+GRResize.m */,
-				EBEF5860189FCE34006DA9C8 /* SFURLRequest */,
 			);
 			path = SFKit;
-			sourceTree = "<group>";
-		};
-		EBEF5860189FCE34006DA9C8 /* SFURLRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SFURLRequest;
 			sourceTree = "<group>";
 		};
 		EBEF5861189FCE34006DA9C8 /* UnirestKit */ = {
@@ -945,6 +956,7 @@
 		EBEF5881189FCE34006DA9C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EB1895BD18B3513500873CB8 /* CFViewController */,
 				EB30E6EB18AD087300D9ABF3 /* CFSequeToDetailController */,
 				EBEF5883189FCE34006DA9C8 /* CFRecordModel */,
 			);
@@ -1109,9 +1121,10 @@
 				EB2663A118AE2EE800E8EDE1 /* iFeedbackx2.png in Resources */,
 				EB1634E518A2694300DD17D5 /* mouse.JPG in Resources */,
 				EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */,
-				EB2663BC18AE6CE500E8EDE1 /* GTM-TS8WFN.plist in Resources */,
 				EB2663A018AE2EE800E8EDE1 /* iFeedback.png in Resources */,
+				EB1895C818B36E4400873CB8 /* GTM-TS8WFN.plist in Resources */,
 				EB2663A318AE2EE800E8EDE1 /* iNewsx2.png in Resources */,
+				EB1895CA18B36E5700873CB8 /* GTM-TS8WFN in Resources */,
 				EB1634FA18A2723400DD17D5 /* CFListCell.xib in Resources */,
 				EBEF56B9189FCD9E006DA9C8 /* back.png in Resources */,
 				EB26639E18AE2EE800E8EDE1 /* iCamera.png in Resources */,
@@ -1182,6 +1195,7 @@
 				EBEF58E4189FCE34006DA9C8 /* UNIRest.m in Sources */,
 				EBEF568F189FCD76006DA9C8 /* main.m in Sources */,
 				EBEF58E0189FCE34006DA9C8 /* UNIJsonNode.m in Sources */,
+				EB1895C018B3514D00873CB8 /* CFViewController.m in Sources */,
 				EBEF58C9189FCE34006DA9C8 /* IDPStackArray.m in Sources */,
 				EB26638B18AE052B00E8EDE1 /* CFSequeToDetail.m in Sources */,
 				EBEF58D0189FCE34006DA9C8 /* UIEvent+IDPExtensions.m in Sources */,

@@ -8,9 +8,9 @@
 
 #import "CFListViewController.h"
 
-@interface CFDetailViewController : UIViewController
-@property (nonatomic, retain) CFRecordModel *model;
-@property (nonatomic, assign) CFListViewController *listViewController;
+@interface CFDetailViewController : CFViewController
+@property (nonatomic, retain) CFRecordModel         *model;
+@property (nonatomic, assign) CFListViewController  *listViewController;
 
 - (IBAction)onBack:(id)sender;
 - (IBAction)onShare:(id)sender;
