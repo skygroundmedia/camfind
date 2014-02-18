@@ -7,17 +7,33 @@
 //
 #import "TAGContainer.h"
 #import "TAGManager.h"
+#import "TAGContainerOpener.h"
 
-@interface CFTAGManager : NSObject
+#define TAGMANAGER [CFTAGManager sharedInstance]
 
-+ (void)setContainer:(TAGContainer *)container;
+@interface CFTAGManager : NSObject <TAGContainerOpenerNotifier>
 
-+ (void)startTimer;
-+ (void)pauseTimer;
-+ (void)sendTime;
+@property (nonatomic, readonly) TAGContainer *container;
 
-+ (void)sendCamFindPost;
-+ (void)sendCamFindDescription:(NSString *)imageDescription;
-+ (void)sendUserLocation;
++ (CFTAGManager *)sharedInstance;
+
+//tag delegate
+- (void)containerAvailable:(TAGContainer *)container;
+
+//location service
+- (void)updateLocation;
+
+//events
+- (void)sendCamFindPost;
+- (void)sendCamFindDescription:(NSString *)imageDescription;
+- (void)sendImpctfulSearch:(NSString *)searchString;
+- (void)sendEmptyImpctfulSearch:(NSString *)searchString;
+
+//app views
+- (void)pushOpenScreenEventWithScreenName:(NSString *)screenName;
+
+//timing
+- (void)startTiming;
+- (void)pauseTimingAndPushTimeWithScreenName:(NSString *)screenName;
 
 @end

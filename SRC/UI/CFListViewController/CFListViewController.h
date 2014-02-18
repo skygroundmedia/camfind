@@ -8,7 +8,7 @@
 
 #import "CFListView.h"
 
-@interface CFListViewController : UIViewController
+@interface CFListViewController : CFViewController
 
 @property (nonatomic, readonly) CFListView        *listView;
 @property (nonatomic, readonly) CFRecordModel     *selectedModel;
