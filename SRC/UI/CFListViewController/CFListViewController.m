@@ -39,7 +39,8 @@
     self.testListCell = nil;
     self.testListCellWOImage = nil;
     self.processor = nil;
-    
+    self.accessoryInputView = nil;
+
     [super dealloc];
 }
 
@@ -54,6 +55,9 @@
     self.dataSource = nil;
     [self.listView updateStatusWithProcessor:nil];
     [self startImageProcessing];
+    
+    [self.accessoryInputView removeFromSuperview];
+    [self.listView.searchBar setInputAccessoryView:self.accessoryInputView];
 }
 
 #pragma mark -
@@ -98,6 +102,10 @@ IDPViewControllerViewOfClassGetterSynthesize (CFListView, listView)
 
 - (void)startImageProcessing {
     [self startGettingPhoto];
+}
+    
+- (IBAction)onDone:(id)sender {
+    [self.listView.searchBar resignFirstResponder];
 }
 
 #pragma mark -
