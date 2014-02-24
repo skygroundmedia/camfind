@@ -1160,7 +1160,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run ed60b7f019cab46431bad5d3b5a09e299f1fab0c 7a7c3113ac1f1d5634bf49f39417370aa19c8f2e16c9255b9949b9e2279938ca";
+			shellScript = "#./Crashlytics.framework/run ed60b7f019cab46431bad5d3b5a09e299f1fab0c 7a7c3113ac1f1d5634bf49f39417370aa19c8f2e16c9255b9949b9e2279938ca\n./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1393,7 +1393,7 @@
 					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "C2CC2C2D-55D6-4314-AD0A-280D7D66061C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1418,7 +1418,7 @@
 					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "C2CC2C2D-55D6-4314-AD0A-280D7D66061C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
