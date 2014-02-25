@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91F8CCC018BCA25D00B7819B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F8CCBF18BCA25D00B7819B /* Crashlytics.framework */; };
 		EB1634E318A223ED00DD17D5 /* CFMainProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634E218A223ED00DD17D5 /* CFMainProcessor.m */; };
 		EB1634E518A2694300DD17D5 /* mouse.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EB1634E418A2694300DD17D5 /* mouse.JPG */; };
 		EB1634F918A2723400DD17D5 /* CFListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1634F418A2723400DD17D5 /* CFListCell.m */; };
@@ -29,7 +30,6 @@
 		EB2663B518AE408500E8EDE1 /* CFTAGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2663B418AE408500E8EDE1 /* CFTAGManager.m */; };
 		EB2663B818AE648800E8EDE1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2663B618AE646800E8EDE1 /* libz.dylib */; };
 		EB26FD9218B235A800741E4E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB26FD9118B235A800741E4E /* CoreLocation.framework */; };
-		EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */; };
 		EB30E6EA18ACD0CB00D9ABF3 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = EB30E6E918ACD0CB00D9ABF3 /* white.png */; };
 		EBB345B718A102A30075F419 /* CFDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B418A102A30075F419 /* CFDetailView.m */; };
 		EBB345B818A102A30075F419 /* CFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB345B618A102A30075F419 /* CFDetailViewController.m */; };
@@ -133,6 +133,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91F8CCBF18BCA25D00B7819B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EB1634E118A223ED00DD17D5 /* CFMainProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMainProcessor.h; sourceTree = "<group>"; };
 		EB1634E218A223ED00DD17D5 /* CFMainProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainProcessor.m; sourceTree = "<group>"; };
 		EB1634E418A2694300DD17D5 /* mouse.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mouse.JPG; sourceTree = "<group>"; };
@@ -167,7 +168,6 @@
 		EB2663B418AE408500E8EDE1 /* CFTAGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTAGManager.m; sourceTree = "<group>"; };
 		EB2663B618AE646800E8EDE1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		EB26FD9118B235A800741E4E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EB30E6E918ACD0CB00D9ABF3 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		EBB345B318A102A30075F419 /* CFDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDetailView.h; sourceTree = "<group>"; };
 		EBB345B418A102A30075F419 /* CFDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDetailView.m; sourceTree = "<group>"; };
@@ -360,9 +360,9 @@
 				EB2663AD18AE3A1200E8EDE1 /* CoreData.framework in Frameworks */,
 				EB2663B118AE3AC700E8EDE1 /* libGoogleAnalyticsServices.a in Frameworks */,
 				EBB345BA18A1259F0075F419 /* AssetsLibrary.framework in Frameworks */,
-				EB30E6DA18ACC80D00D9ABF3 /* Crashlytics.framework in Frameworks */,
 				EBEF5685189FCD76006DA9C8 /* CoreGraphics.framework in Frameworks */,
 				EBEF5687189FCD76006DA9C8 /* UIKit.framework in Frameworks */,
+				91F8CCC018BCA25D00B7819B /* Crashlytics.framework in Frameworks */,
 				EBEF5683189FCD76006DA9C8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,12 +499,12 @@
 		EBEF5681189FCD76006DA9C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91F8CCBF18BCA25D00B7819B /* Crashlytics.framework */,
 				EB26FD9118B235A800741E4E /* CoreLocation.framework */,
 				EB2663B618AE646800E8EDE1 /* libz.dylib */,
 				EB2663AE18AE3A2300E8EDE1 /* SystemConfiguration.framework */,
 				EB2663AC18AE3A1200E8EDE1 /* CoreData.framework */,
 				EB2663AA18AE3A0500E8EDE1 /* AdSupport.framework */,
-				EB30E6D918ACC80D00D9ABF3 /* Crashlytics.framework */,
 				EBB345B918A1259F0075F419 /* AssetsLibrary.framework */,
 				EBEF5682189FCD76006DA9C8 /* Foundation.framework */,
 				EBEF5684189FCD76006DA9C8 /* CoreGraphics.framework */,
@@ -1160,7 +1160,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#./Crashlytics.framework/run ed60b7f019cab46431bad5d3b5a09e299f1fab0c 7a7c3113ac1f1d5634bf49f39417370aa19c8f2e16c9255b9949b9e2279938ca\n./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b";
+			shellScript = "#./Crashlytics.framework/run c4dcde3d75563274731fe0519d4220e84b151323 6a6b2c1383640a9e12b3ab6b1313cb3d546a277fec51848e7475bdde6504646b\n./Crashlytics.framework/run ed60b7f019cab46431bad5d3b5a09e299f1fab0c 7a7c3113ac1f1d5634bf49f39417370aa19c8f2e16c9255b9949b9e2279938ca";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1384,6 +1384,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/",
+					/Users/animal/Developer/Projects/ShopifyCamFind,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
@@ -1409,6 +1410,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/",
+					/Users/animal/Developer/Projects/ShopifyCamFind,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CamFind/CamFind-Prefix.pch";
