@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="sjF-tq-pzs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="sjF-tq-pzs">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
@@ -31,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="488" y="85"/>
         </scene>
-        <!--News View Controller - News-->
+        <!--News View Controller - About-->
         <scene sceneID="s8u-QZ-exe">
             <objects>
                 <viewController id="o9Q-rv-Kmo" customClass="CFNewsViewController" sceneMemberID="viewController">
@@ -42,7 +42,6 @@
                             <webView contentMode="scaleToFill" id="hL7-yo-wPB">
                                 <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="delegate" destination="o9Q-rv-Kmo" id="n1X-XX-GX5"/>
@@ -55,7 +54,7 @@
                             <outlet property="webView" destination="hL7-yo-wPB" id="8pO-vQ-dBN"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="iNews.png" id="hEK-KV-eje"/>
+                    <tabBarItem key="tabBarItem" title="About" image="iNews.png" id="hEK-KV-eje"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eq6-Nc-J17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +111,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="processor Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2tN-gC-8OT">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2tN-gC-8OT">
                                                 <rect key="frame" x="0.0" y="11" width="320" height="13"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
@@ -273,7 +272,6 @@
                             <webView contentMode="scaleToFill" id="YyK-Cw-Kes">
                                 <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="delegate" destination="faG-J7-l3P" id="U57-sG-88w"/>
