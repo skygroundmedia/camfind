@@ -26,17 +26,17 @@ App Workflow
 3. Using the <token>, the app sends a GET request to [CamFind Image Response API](https://camfind.p.mashape.com/image_responses/<token>)
 
 4. CamFind API responds back with a:
-<pre>
+```language-bash
  {
   "status": "completed",
   "name": "description of image"
  }
-</pre>
+```
 
 5. Using "name": "description of image",  the app sends another GET request to YQL server. 
-<pre>
- var q = "http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20html%20WHERE%20url%3D%22http%3A%2F%2Fimpctful.com%2Fsearch%3Fx%3D0%26amp%3By%3D0%26amp%3Bq%3D" + keyword + "%22%20and%20xpath%3D'%2F%2F*%5B%40id%3D%22search%22%5D'&format=json&diagnostics=true&callback=?";
-</pre>
+```language-bash
+var q = "http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20html%20WHERE%20url%3D%22http%3A%2F%2Fimpctful.com%2Fsearch%3Fx%3D0%26amp%3By%3D0%26amp%3Bq%3D" + keyword + "%22%20and%20xpath%3D'%2F%2F*%5B%40id%3D%22search%22%5D'&format=json&diagnostics=true&callback=?";
+```
 
  [Javascript Example](http://jsbin.com/IhawIwO/16/edit)
 
@@ -48,11 +48,11 @@ Resources
 
 Mashape.com
 
-<pre>
+```language-bash
  Username: mojotojo
  Password: p@ssword
  Testing Key: WwvoXA8VZ73TfJafX3nvuKBZ0JaQBtnV
-</pre>
+```
 
 
 Yahoo Query Language
