@@ -1,0 +1,48 @@
+Выдержки из писем клиента. 
+*********************
+The HomeView is a UIWebView that will point to:
+http://mobile.kdfc.com/
+
+The ContactView is a UIWebView that will point to 
+http://mobile.kdfc.com/feedback
+*************
+
+I absolutely love how you guys made the search results listing look.  All I ask is that when a user taps (onTap Event) on a specific item, we take them to a UIWebView where we show them their product page. 
+
+Each item from the YQL has an anchor tag like this: 
+
+"a": { "href": "/products/ocean-zebra-wood-aviator-sunglasses” }
+
+all we need to do is load the UIWebView with this URL:
+
+http://impctful.com/products/ocean-zebra-wood-aviator-sunglasses
+
+**************************
+
+No "ShopifyCamFind" or "Shopify" anything. Let's call the app, CamFind.
+
+Package Name:
+com.idap.camfind
+********************************************
+
+1) Instead of sending a 640x960 or 640x1136 photo to mashape, can you POST something smaller to their API? Maybe 320x480 image?  I think it will speed up the app.
+
+It possible, will do. We will proportionally resize it.
+
+2) Every time a user takes a new picture, can we please save it to their camera roll?
+
+No problems. Should we save resized image, or full size? Save automatically ?  Or by button pressed, for example ?
+
+3) Can you also let users upload photos from their camera roll? 
+
+Will do, please include this to wireframes.
+
+4) I sill send a wireframe in a few hours.
+
+Oh, it is great. Waiting… 
+
+5) Can we install crashlytics? I can give you a username and password in a bit.
+
+I think, we already have everything for adding it. 
+
+******************************************************

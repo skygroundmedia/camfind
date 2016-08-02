@@ -1,0 +1,26 @@
+1) I've given anton.kovalyov@idapgroup.com & client.team@idapgroup.com access to
+ to a new crashlytics account. If you have any problems getting that to work, please let me know.
+
+2) I've added artem.chabanniy@gmail.com & trimmurrti@gmail.com accesss to Google iOS Tag Manager. I will need your help configuring the tracking.  Here are the things I would like to track. 
+
+https://developers.google.com/tag-manager/ios/
+• How long do users spend on the app (duration time)?
+
+• How frequently do users return to the app (# of repeated users every day)?
+
+• How many requests are sent to CamFind ( # POST requests sent every day to camfind)?
+
+• What are the descriptions that are returned from /image_responses/<token>
+For example: 
+"description": "black sun glasses"
+"description": "white t-shirt"
+
+• What is the location of the users taking photos of the app (latitude + longitude)?
+
+3) The app looks pretty damn good!  Congrats!  I do have a few design tweaks so see the attachments. 
+
+3.a) See "done.png".  When a user is typing inside of the search box and press "done" on the keyboard, it should submit the  search query. 
+
+3.b) I added some instructions to search.  
+
+3.c) I also added some updates to uiwebview. 
