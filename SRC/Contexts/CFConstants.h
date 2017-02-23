@@ -14,7 +14,7 @@ static NSString * const kSFCFpostImagePath              = @"image_requests";
 static NSString * const kSFCFgetDescriptionPathFormat   = @"image_responses/%@";
 
 static NSString * const kSFCFAuthHeader                 =  @"X-Mashape-Authorization";
-static NSString * const kSFCFAuthKey                    =  @"TedWlv15kFUY83Zoh1ieUrJc3cknEHPF";
+static NSString * const kSFCFAuthKey                    =  @"ADD YOUR X-MASHAPE-KEY HERE"; //https://market.mashape.com/imagesearcher/cloudsight
 
 static NSString * const kSFCFParameterLocale            =  @"image_request[locale]";
 static NSString * const kSFCFParameterLocaleKey         =  @"en_US";
@@ -47,8 +47,8 @@ static NSString * const kSFDefsImageDescriptionKey      = @"sfImageDescription";
 static NSString * const kSFDefaultDescription           = @"shirt";
 static NSString * const kSFDefaultImageName             = @"image.jpg";
 
-static NSString * const kCFNewsURLString                = @"http://mobile.impctful.com/";
-static NSString * const kCFFeedbackURLString            = @"http://mobile.impctful.com/feedback";
+static NSString * const kCFNewsURLString                = @"http://www.chrisjmendez.com/";
+static NSString * const kCFFeedbackURLString            = @"http://www.chrisjmendez.com/about";
 
 static NSString * const kCFImpctfulHost                 = @"http://impctful.com/";
 
